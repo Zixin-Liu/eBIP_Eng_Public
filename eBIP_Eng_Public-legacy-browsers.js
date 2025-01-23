@@ -1,18 +1,10 @@
-﻿/****************** 
- * Ebip_1116 *
- ******************/
-
-import { core, data, sound, util, visual, hardware } from './lib/psychojs-2023.2.2.js';
-const { PsychoJS } = core;
-const { TrialHandler, MultiStairHandler } = data;
-const { Scheduler } = util;
-//some handy aliases as in the psychopy scripts;
-const { abs, sin, cos, PI: pi, sqrt } = Math;
-const { round } = util;
+﻿/************************ 
+ * Ebip_Eng_Public *
+ ************************/
 
 
 // store info about the experiment session:
-let expName = 'eBIP_1116';  // from the Builder filename that created this script
+let expName = 'eBIP_Eng_Public';  // from the Builder filename that created this script
 let expInfo = {
     'participant': 'Optional',
     'email': 'Optional@gmail.com',
@@ -46,7 +38,7 @@ psychoJS.schedule(psychoJS.gui.DlgFromDict({
 
 const flowScheduler = new Scheduler(psychoJS);
 const dialogCancelScheduler = new Scheduler(psychoJS);
-psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.button === 'OK'); }, flowScheduler, dialogCancelScheduler);
+psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.button === 'OK'); },flowScheduler, dialogCancelScheduler);
 
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
@@ -798,21 +790,12 @@ psychoJS.start({
     {'name': 'imgPerception/Slide183.png', 'path': 'imgPerception/Slide183.png'},
     {'name': 'imgPerception/Slide184.png', 'path': 'imgPerception/Slide184.png'},
     {'name': 'imgPerception/Slide185.png', 'path': 'imgPerception/Slide185.png'},
-    {'name': 'img/angersmetz.jpg', 'path': 'img/angersmetz.jpg'},
     {'name': 'img/clavier.jpg', 'path': 'img/clavier.jpg'},
     {'name': 'img/Colour_Trial.png', 'path': 'img/Colour_Trial.png'},
-    {'name': 'img/Editing images.pptx', 'path': 'img/Editing images.pptx'},
-    {'name': 'img/espoireamitie.jpg', 'path': 'img/espoireamitie.jpg'},
     {'name': 'img/Face_Trial.png', 'path': 'img/Face_Trial.png'},
-    {'name': 'img/hollande.jpg', 'path': 'img/hollande.jpg'},
-    {'name': 'img/imgblank.jpg', 'path': 'img/imgblank.jpg'},
     {'name': 'img/Letter_Trial.png', 'path': 'img/Letter_Trial.png'},
     {'name': 'img/Map_Trial.png', 'path': 'img/Map_Trial.png'},
     {'name': 'img/Shape_Trial.png', 'path': 'img/Shape_Trial.png'},
-    {'name': 'img/T.png', 'path': 'img/T.png'},
-    {'name': 'img/vivacite 2.jpg', 'path': 'img/vivacite 2.jpg'},
-    {'name': 'img/vivacite 3.jpg', 'path': 'img/vivacite 3.jpg'},
-    {'name': 'img/vivacite 4.jpg', 'path': 'img/vivacite 4.jpg'},
     {'name': 'img/vivacite.jpg', 'path': 'img/vivacite.jpg'},
     {'name': 'audioStims/access.wav', 'path': 'audioStims/access.wav'},
     {'name': 'audioStims/altruism.wav', 'path': 'audioStims/altruism.wav'},
@@ -982,7 +965,7 @@ async function updateInfo() {
   currentLoop = psychoJS.experiment;  // right now there are no loops
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2023.2.2';
+  expInfo['psychopyVersion'] = '2024.2.4';
   expInfo['OS'] = window.navigator.platform;
 
 
@@ -1154,7 +1137,7 @@ async function experimentInit() {
     text: 'Volume Calibration',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1168,7 +1151,7 @@ async function experimentInit() {
     text: 'Make sure you can hear the music and that the volume is correct.\n\nWe recommend that you wear headphones for this test and turn the sound up to a comfortable level for you.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
@@ -1180,7 +1163,7 @@ async function experimentInit() {
     text: "Press the < Space > key to continue. \nIf you don't hear the music, press the <Esc> key.\n",
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.35)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.35)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -3.0 
@@ -1200,7 +1183,7 @@ async function experimentInit() {
     text: 'Keyboard Calibration',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('red'),  opacity: 1,
     depth: 0.0 
@@ -1212,7 +1195,7 @@ async function experimentInit() {
     text: "During this test, you will have to use the following keys on the TOP LEFT part of your keyboard:\n              '1',  '2',  '3',  '4',  '5'\n\nPress the buttons one by one, make sure your keyboard works well.\n\nThe button you just pressed is:\n\n\n",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.035,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.1], draggable: false, height: 0.035,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1224,7 +1207,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.05)], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.05)], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
@@ -1238,7 +1221,7 @@ async function experimentInit() {
     text: 'If your keyboard is working, press <Enter>.\n',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.5)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.5)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -5.0 
@@ -1249,7 +1232,10 @@ async function experimentInit() {
     name : 'key_test_image', units : undefined, 
     image : 'img/clavier.jpg', mask : undefined,
     anchor : 'center',
-    ori : 0, pos : [0, (- 0.3)], size : [0.65, 0.3],
+    ori : 0, 
+    pos : [0, (- 0.3)], 
+    draggable: false,
+    size : [0.65, 0.3],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -6.0 
@@ -1262,7 +1248,7 @@ async function experimentInit() {
     text: "Let's start the first part of the test, are you ready?",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1276,7 +1262,7 @@ async function experimentInit() {
     text: 'Proceed by pressing < Space >.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1290,7 +1276,7 @@ async function experimentInit() {
     text: 'Part 1/4: Evaluation of Vividness of mental imagery  ',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1304,7 +1290,7 @@ async function experimentInit() {
     text: 'For example, imagine the painting Mona Lisa.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.33], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.33], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1316,7 +1302,7 @@ async function experimentInit() {
     text: 'We will describe scenarios that you will have to imagine in your mind. Then we will ask you to give a score from 1 to 5 to evaluate its liveliness.\n\nAssess the vividness of your mental image with a score from 1 to 5:\n\n1: No image is visible.\n2: the image is vague and imprecise.\n3: The image is moderately clear and sharp.\n4: the image is relatively clear, almost as sharp and precise as a visual perception.\n5: the image is perfectly clear, as sharp and precise as real visual perception. ',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.1], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.1], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
@@ -1327,7 +1313,10 @@ async function experimentInit() {
     name : 'vivid_image', units : undefined, 
     image : 'img/vivacite.jpg', mask : undefined,
     anchor : 'center',
-    ori : 0, pos : [0, (- 0.28)], size : [0.95, 0.2],
+    ori : 0, 
+    pos : [0, (- 0.28)], 
+    draggable: false,
+    size : [0.95, 0.2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -4.0 
@@ -1338,7 +1327,7 @@ async function experimentInit() {
     text: 'Enter a rating (1-5) to continue. Use the TOP LEFT part of your keyboard.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -5.0 
@@ -1352,7 +1341,7 @@ async function experimentInit() {
     text: 'Part 1/4: Vividness Test',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1364,7 +1353,7 @@ async function experimentInit() {
     text: "We are going to describe some scenarios to you, which you need to imagine in your mind. \nNext, we'll ask you to rate it from 1 to 5 to assess its vividness\n\nThis task takes about 3 minutes.",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1376,7 +1365,7 @@ async function experimentInit() {
     text: 'Press the < Space > key to proceed.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1390,7 +1379,7 @@ async function experimentInit() {
     text: 'Good!',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.15], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
@@ -1404,7 +1393,7 @@ async function experimentInit() {
     text: 'Part 1/4: Test of Mental Imagery Vividness',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1418,7 +1407,7 @@ async function experimentInit() {
     text: 'Give a score of 1 to 5 to evaluate the vividness of your visual mental imagery',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1430,7 +1419,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.25], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.25], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
@@ -1442,7 +1431,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
@@ -1454,7 +1443,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.15], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -5.0 
@@ -1468,7 +1457,7 @@ async function experimentInit() {
     text: 'Part 1/4: Vividness test result',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1484,7 +1473,7 @@ async function experimentInit() {
     text: 'Press < Space > key to proceed to the second part.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.2)], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.2)], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1498,7 +1487,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: 1,
     depth: -4.0 
@@ -1512,7 +1501,7 @@ async function experimentInit() {
     text: 'Part 2/4: Visual Mental Imagery Test',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1524,7 +1513,7 @@ async function experimentInit() {
     text: 'In this second part, we will evaluate your Visual Mental Imagery through tests covering five categories: shape, color, face, letter and map.\n\nFor each category, you will start with a trial. Then, you will need to respond to the following 15 tests.\n\nThis Visual Mental Imagery task will take about 10 minutes.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1536,7 +1525,7 @@ async function experimentInit() {
     text: 'Press < Space > to proceed.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -2.0 
@@ -1552,7 +1541,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1584,7 +1573,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.13], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.13], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -5.0 
@@ -1595,7 +1584,10 @@ async function experimentInit() {
     name : 'imagery_task_trials_img1', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0, pos : [0, (- 0.25)], size : [0.4, 0.25],
+    ori : 0, 
+    pos : [0, (- 0.25)], 
+    draggable: false,
+    size : [0.4, 0.25],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -6.0 
@@ -1606,7 +1598,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.45)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.45)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -7.0 
@@ -1620,7 +1612,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1632,7 +1624,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1648,7 +1640,7 @@ async function experimentInit() {
     text: '',
     font: 'Open Sans',
     units: undefined, 
-    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0], draggable: false, height: 0.1,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: undefined,
     depth: 0.0 
@@ -1662,7 +1654,7 @@ async function experimentInit() {
     text: 'Part 2/4 : Test of Imagination',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1674,7 +1666,7 @@ async function experimentInit() {
     text: "Bravo!\n\nNow let's start the tests.\n\nTake your time to answer each question.",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1688,7 +1680,7 @@ async function experimentInit() {
     text: 'When you are ready, press the < Space > key to proceed.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -3.0 
@@ -1702,7 +1694,7 @@ async function experimentInit() {
     text: 'Part 2/4: Test of Visual Mental Imagery',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1714,7 +1706,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], draggable: false, height: 0.05,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1744,7 +1736,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -5.0 
@@ -1760,7 +1752,7 @@ async function experimentInit() {
     text: 'Give a score of 1 to 4 to rate the vividness of your image.\n',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1776,7 +1768,7 @@ async function experimentInit() {
     text: 'Part 2/4: Test of Visual Mental Imagery',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1792,7 +1784,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
@@ -1806,7 +1798,7 @@ async function experimentInit() {
     text: 'When you are ready, press the < Space > key to proceed.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -4.0 
@@ -1820,7 +1812,7 @@ async function experimentInit() {
     text: 'Part 3/4 : Test of Perception\n\n',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1832,7 +1824,7 @@ async function experimentInit() {
     text: "In this third part, we are going to show you pictures of objects, food, celebrities, or written words that we have asked you to imagine throughout the part 2 of this test.\n\nDuring this part, you will answer the questions by comparing the visual characteristics perceived based on the pictures that you will be able to SEE.\n\nThe perception test takes approximately 10 minutes, with 60 trials in total.\n\nAttention, for the map test, select the city indicated by a red dot (whether it appears first or second).\n\nAfter each question, rate the level of CONFIDENCE of your answer:\n1: I am not at all confident in my answer.\n2: I'm a little confident about my answer.\n3: I am confident in my answer.\n4: I am absolutely sure of my answer.",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1846,7 +1838,7 @@ async function experimentInit() {
     text: 'Press < Space > to proceed. ',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -3.0 
@@ -1860,7 +1852,7 @@ async function experimentInit() {
     text: 'Part 3: Test of Perception',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1877,7 +1869,10 @@ async function experimentInit() {
     name : 'perception_task_img1', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0, pos : [0, 0], size : [1.16, 0.64],
+    ori : 0, 
+    pos : [0, 0], 
+    draggable: false,
+    size : [1.16, 0.64],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -1893,7 +1888,10 @@ async function experimentInit() {
     name : 'perception_task_img2', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0, pos : [0, 0], size : [1.16, 0.64],
+    ori : 0, 
+    pos : [0, 0], 
+    draggable: false,
+    size : [1.16, 0.64],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -4.0 
@@ -1909,7 +1907,10 @@ async function experimentInit() {
     name : 'perception_task_img3', units : undefined, 
     image : 'default.png', mask : undefined,
     anchor : 'center',
-    ori : 0, pos : [0, 0], size : [1.16, 0.64],
+    ori : 0, 
+    pos : [0, 0], 
+    draggable: false,
+    size : [1.16, 0.64],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -6.0 
@@ -1922,7 +1923,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.45)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.45)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -8.0 
@@ -1936,7 +1937,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1948,7 +1949,7 @@ async function experimentInit() {
     text: "Give a score from 1 to 4 to assess your CONFIDENCE.\n\n1: I am not at all confident in my answer.\n2: I'm a little confident about my answer.\n3: I am confident in my answer.\n4: I am absolutely sure of my answer.",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
@@ -1964,7 +1965,7 @@ async function experimentInit() {
     text: 'Part 3/4 : Test of Perception',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -1980,7 +1981,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('white'),  opacity: 1,
     depth: -2.0 
@@ -1994,7 +1995,7 @@ async function experimentInit() {
     text: 'Press < Space > to proceed. ',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -4.0 
@@ -2008,7 +2009,7 @@ async function experimentInit() {
     text: 'Part 4/4: Test of Semantics',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1.0,
     depth: 0.0 
@@ -2020,7 +2021,7 @@ async function experimentInit() {
     text: 'In this last part, we will evaluate your association between abstract words.\n\nDuring this part, you will answer the questions by comparing the abstract characteristics based on the semantic relationship.\nFor each trial, you will hear two abstract words after hearing the instruction “Semantics”. Then, you will hear the indication semantic word. \nWhich of them is closer to the indication word?\nWe will start with a practice trial. \n\nThis Semantics Task will take about 3 minutes with 12 trials.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1.0,
     depth: -1.0 
@@ -2034,7 +2035,7 @@ async function experimentInit() {
     text: 'Press <Space> to proceed.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1.0,
     depth: -3.0 
@@ -2048,7 +2049,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -2080,7 +2081,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.13], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.13], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: -5.0 
@@ -2092,7 +2093,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.4)], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('green'),  opacity: 1,
     depth: -6.0 
@@ -2106,7 +2107,7 @@ async function experimentInit() {
     text: 'Part 4/4: Test of Semantics',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.04,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0.4], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1.0,
     depth: 0.0 
@@ -2118,7 +2119,7 @@ async function experimentInit() {
     text: '',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.04,  wrapWidth: undefined, ori: 0.0,
+    pos: [0, 0.3], draggable: false, height: 0.04,  wrapWidth: undefined, ori: 0.0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1.0,
     depth: -1.0 
@@ -2127,13 +2128,17 @@ async function experimentInit() {
   fixation = new visual.ShapeStim ({
     win: psychoJS.window, name: 'fixation', 
     vertices: 'cross', size:[0.03, 0.03],
-    ori: 0.0, pos: [0, 0],
-    anchor: 'center',
+    ori: 0.0, 
+    pos: [0, 0], 
+    draggable: false, 
+    anchor: 'center', 
     lineWidth: 1.0, 
-    colorSpace: 'rgb',
-    lineColor: new util.Color('white'),
-    fillColor: new util.Color('white'),
-    opacity: undefined, depth: -2, interpolate: true,
+    lineColor: new util.Color('white'), 
+    fillColor: new util.Color('white'), 
+    colorSpace: 'rgb', 
+    opacity: undefined, 
+    depth: -2, 
+    interpolate: true, 
   });
   
   field_s = new sound.Sound({
@@ -2170,7 +2175,7 @@ async function experimentInit() {
     text: 'This is the end of tests. Thank you for your participation!\n\n\nFeel free to comment on the site or contact us:\n\n- Share your experience of life and your result.\n- Interested in an fMRI neuroimaging test for research.\n- ...\n\n\nWait for the program to close or press the <Space> key to exit after 5 seconds.',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], draggable: false, height: 0.03,  wrapWidth: undefined, ori: 0,
     languageStyle: 'LTR',
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
@@ -2187,6 +2192,8 @@ async function experimentInit() {
 var t;
 var frameN;
 var continueRoutine;
+var resource_manageMaxDurationReached;
+var resource_manageMaxDuration;
 var resource_manageComponents;
 function resource_manageRoutineBegin(snapshot) {
   return async function () {
@@ -2194,17 +2201,21 @@ function resource_manageRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'resource_manage' ---
     t = 0;
-    resource_manageClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    resource_manageClock.reset();
+    routineTimer.reset();
+    resource_manageMaxDurationReached = false;
     // update component parameters for each repeat
     psychoJS.experiment.addData('resource_manage.started', globalClock.getTime());
+    resource_manageMaxDuration = null
     // keep track of which components have finished
     resource_manageComponents = [];
     
-    for (const thisComponent of resource_manageComponents)
+    resource_manageComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2223,11 +2234,11 @@ function resource_manageRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of resource_manageComponents)
+    resource_manageComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2242,11 +2253,11 @@ function resource_manageRoutineEachFrame() {
 function resource_manageRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'resource_manage' ---
-    for (const thisComponent of resource_manageComponents) {
+    resource_manageComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('resource_manage.stopped', globalClock.getTime());
     // the Routine "resource_manage" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset();
@@ -2260,7 +2271,9 @@ function resource_manageRoutineEnd(snapshot) {
 }
 
 
+var volume_testMaxDurationReached;
 var _volume_response_allKeys;
+var volume_testMaxDuration;
 var volume_testComponents;
 function volume_testRoutineBegin(snapshot) {
   return async function () {
@@ -2268,16 +2281,19 @@ function volume_testRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'volume_test' ---
     t = 0;
-    volume_testClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    volume_testClock.reset();
+    routineTimer.reset();
+    volume_testMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('volume_test.started', globalClock.getTime());
     volume_response.keys = undefined;
     volume_response.rt = undefined;
     _volume_response_allKeys = [];
     volume_text.setAlignHoriz('left')
     sound_1.setVolume(8);
+    psychoJS.experiment.addData('volume_test.started', globalClock.getTime());
+    volume_testMaxDuration = null
     // keep track of which components have finished
     volume_testComponents = [];
     volume_testComponents.push(volume_title);
@@ -2286,9 +2302,10 @@ function volume_testRoutineBegin(snapshot) {
     volume_testComponents.push(volume_continue);
     volume_testComponents.push(sound_1);
     
-    for (const thisComponent of volume_testComponents)
+    volume_testComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2375,11 +2392,11 @@ function volume_testRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of volume_testComponents)
+    volume_testComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2394,11 +2411,11 @@ function volume_testRoutineEachFrame() {
 function volume_testRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'volume_test' ---
-    for (const thisComponent of volume_testComponents) {
+    volume_testComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('volume_test.stopped', globalClock.getTime());
     volume_response.stop();
     sound_1.stop();  // ensure sound has stopped at end of Routine
@@ -2414,7 +2431,9 @@ function volume_testRoutineEnd(snapshot) {
 }
 
 
+var key_testMaxDurationReached;
 var _key_test_show_allKeys;
+var key_testMaxDuration;
 var key_testComponents;
 function key_testRoutineBegin(snapshot) {
   return async function () {
@@ -2422,17 +2441,20 @@ function key_testRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'key_test' ---
     t = 0;
-    key_testClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    key_testClock.reset();
+    routineTimer.reset();
+    key_testMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('key_test.started', globalClock.getTime());
     key_test_show.keys = undefined;
     key_test_show.rt = undefined;
     _key_test_show_allKeys = [];
     // Run 'Begin Routine' code from key_test_present
     key_test_text.setAlignHoriz('left')
     key_test_display.text = '';
+    psychoJS.experiment.addData('key_test.started', globalClock.getTime());
+    key_testMaxDuration = null
     // keep track of which components have finished
     key_testComponents = [];
     key_testComponents.push(key_test_title);
@@ -2442,9 +2464,10 @@ function key_testRoutineBegin(snapshot) {
     key_testComponents.push(key_test_continue);
     key_testComponents.push(key_test_image);
     
-    for (const thisComponent of key_testComponents)
+    key_testComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2553,11 +2576,11 @@ function key_testRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of key_testComponents)
+    key_testComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2572,11 +2595,11 @@ function key_testRoutineEachFrame() {
 function key_testRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'key_test' ---
-    for (const thisComponent of key_testComponents) {
+    key_testComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('key_test.stopped', globalClock.getTime());
     // update the trial handler
     if (currentLoop instanceof MultiStairHandler) {
@@ -2601,7 +2624,9 @@ function key_testRoutineEnd(snapshot) {
 }
 
 
+var begin_instructionMaxDurationReached;
 var _begin_response_allKeys;
+var begin_instructionMaxDuration;
 var begin_instructionComponents;
 function begin_instructionRoutineBegin(snapshot) {
   return async function () {
@@ -2609,23 +2634,27 @@ function begin_instructionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'begin_instruction' ---
     t = 0;
-    begin_instructionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    begin_instructionClock.reset();
+    routineTimer.reset();
+    begin_instructionMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('begin_instruction.started', globalClock.getTime());
     begin_response.keys = undefined;
     begin_response.rt = undefined;
     _begin_response_allKeys = [];
+    psychoJS.experiment.addData('begin_instruction.started', globalClock.getTime());
+    begin_instructionMaxDuration = null
     // keep track of which components have finished
     begin_instructionComponents = [];
     begin_instructionComponents.push(begin_text);
     begin_instructionComponents.push(begin_response);
     begin_instructionComponents.push(begin_continue);
     
-    for (const thisComponent of begin_instructionComponents)
+    begin_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2689,11 +2718,11 @@ function begin_instructionRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of begin_instructionComponents)
+    begin_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2708,11 +2737,11 @@ function begin_instructionRoutineEachFrame() {
 function begin_instructionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'begin_instruction' ---
-    for (const thisComponent of begin_instructionComponents) {
+    begin_instructionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('begin_instruction.stopped', globalClock.getTime());
     begin_response.stop();
     // the Routine "begin_instruction" was not non-slip safe, so reset the non-slip timer
@@ -2727,7 +2756,9 @@ function begin_instructionRoutineEnd(snapshot) {
 }
 
 
+var vivid_instructionMaxDurationReached;
 var _vivid_response_allKeys;
+var vivid_instructionMaxDuration;
 var vivid_instructionComponents;
 function vivid_instructionRoutineBegin(snapshot) {
   return async function () {
@@ -2735,16 +2766,19 @@ function vivid_instructionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'vivid_instruction' ---
     t = 0;
-    vivid_instructionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    vivid_instructionClock.reset();
+    routineTimer.reset();
+    vivid_instructionMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('vivid_instruction.started', globalClock.getTime());
     vivid_response.keys = undefined;
     vivid_response.rt = undefined;
     _vivid_response_allKeys = [];
     vivid_rating.setAlignHoriz('left')
     vivid_title.setAlignHoriz('left')
+    psychoJS.experiment.addData('vivid_instruction.started', globalClock.getTime());
+    vivid_instructionMaxDuration = null
     // keep track of which components have finished
     vivid_instructionComponents = [];
     vivid_instructionComponents.push(vivid_title);
@@ -2754,9 +2788,10 @@ function vivid_instructionRoutineBegin(snapshot) {
     vivid_instructionComponents.push(vivid_image);
     vivid_instructionComponents.push(vivid_text);
     
-    for (const thisComponent of vivid_instructionComponents)
+    vivid_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2850,11 +2885,11 @@ function vivid_instructionRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of vivid_instructionComponents)
+    vivid_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -2869,11 +2904,11 @@ function vivid_instructionRoutineEachFrame() {
 function vivid_instructionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'vivid_instruction' ---
-    for (const thisComponent of vivid_instructionComponents) {
+    vivid_instructionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('vivid_instruction.stopped', globalClock.getTime());
     vivid_response.stop();
     // the Routine "vivid_instruction" was not non-slip safe, so reset the non-slip timer
@@ -2888,7 +2923,9 @@ function vivid_instructionRoutineEnd(snapshot) {
 }
 
 
+var vviq_instructionMaxDurationReached;
 var _vviq_instruction_response_allKeys;
+var vviq_instructionMaxDuration;
 var vviq_instructionComponents;
 function vviq_instructionRoutineBegin(snapshot) {
   return async function () {
@@ -2896,14 +2933,17 @@ function vviq_instructionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'vviq_instruction' ---
     t = 0;
-    vviq_instructionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    vviq_instructionClock.reset();
+    routineTimer.reset();
+    vviq_instructionMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('vviq_instruction.started', globalClock.getTime());
     vviq_instruction_response.keys = undefined;
     vviq_instruction_response.rt = undefined;
     _vviq_instruction_response_allKeys = [];
+    psychoJS.experiment.addData('vviq_instruction.started', globalClock.getTime());
+    vviq_instructionMaxDuration = null
     // keep track of which components have finished
     vviq_instructionComponents = [];
     vviq_instructionComponents.push(vviq_instruction_title);
@@ -2912,9 +2952,10 @@ function vviq_instructionRoutineBegin(snapshot) {
     vviq_instructionComponents.push(vviq_instruction_response);
     vviq_instructionComponents.push(vviq_instruction_good);
     
-    for (const thisComponent of vviq_instructionComponents)
+    vviq_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -2998,11 +3039,11 @@ function vviq_instructionRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of vviq_instructionComponents)
+    vviq_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3017,11 +3058,11 @@ function vviq_instructionRoutineEachFrame() {
 function vviq_instructionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'vviq_instruction' ---
-    for (const thisComponent of vviq_instructionComponents) {
+    vviq_instructionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('vviq_instruction.stopped', globalClock.getTime());
     vviq_instruction_response.stop();
     // the Routine "vviq_instruction" was not non-slip safe, so reset the non-slip timer
@@ -3053,14 +3094,15 @@ function vviq_trialsLoopBegin(vviq_trialsLoopScheduler, snapshot) {
     currentLoop = vviq_trials;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisVviq_trial of vviq_trials) {
+    vviq_trials.forEach(function() {
       snapshot = vviq_trials.getSnapshot();
+    
       vviq_trialsLoopScheduler.add(importConditions(snapshot));
       vviq_trialsLoopScheduler.add(vviq_taskRoutineBegin(snapshot));
       vviq_trialsLoopScheduler.add(vviq_taskRoutineEachFrame());
       vviq_trialsLoopScheduler.add(vviq_taskRoutineEnd(snapshot));
       vviq_trialsLoopScheduler.add(vviq_trialsLoopEndIteration(vviq_trialsLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3116,8 +3158,9 @@ function imagery_domainLoopBegin(imagery_domainLoopScheduler, snapshot) {
     currentLoop = imagery_domain;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisImagery_domain of imagery_domain) {
+    imagery_domain.forEach(function() {
       snapshot = imagery_domain.getSnapshot();
+    
       imagery_domainLoopScheduler.add(importConditions(snapshot));
       const imagery_trialsLoopScheduler = new Scheduler(psychoJS);
       imagery_domainLoopScheduler.add(imagery_trialsLoopBegin(imagery_trialsLoopScheduler, snapshot));
@@ -3134,7 +3177,7 @@ function imagery_domainLoopBegin(imagery_domainLoopScheduler, snapshot) {
       imagery_domainLoopScheduler.add(imagery_task_feedbackRoutineEachFrame());
       imagery_domainLoopScheduler.add(imagery_task_feedbackRoutineEnd(snapshot));
       imagery_domainLoopScheduler.add(imagery_domainLoopEndIteration(imagery_domainLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3158,8 +3201,9 @@ function imagery_trialsLoopBegin(imagery_trialsLoopScheduler, snapshot) {
     currentLoop = imagery_trials;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisImagery_trial of imagery_trials) {
+    imagery_trials.forEach(function() {
       snapshot = imagery_trials.getSnapshot();
+    
       imagery_trialsLoopScheduler.add(importConditions(snapshot));
       imagery_trialsLoopScheduler.add(imagery_task_trialsRoutineBegin(snapshot));
       imagery_trialsLoopScheduler.add(imagery_task_trialsRoutineEachFrame());
@@ -3171,7 +3215,7 @@ function imagery_trialsLoopBegin(imagery_trialsLoopScheduler, snapshot) {
       imagery_trialsLoopScheduler.add(restingRoutineEachFrame());
       imagery_trialsLoopScheduler.add(restingRoutineEnd(snapshot));
       imagery_trialsLoopScheduler.add(imagery_trialsLoopEndIteration(imagery_trialsLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3225,8 +3269,9 @@ function imagery_task_itemsLoopBegin(imagery_task_itemsLoopScheduler, snapshot) 
     currentLoop = imagery_task_items;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisImagery_task_item of imagery_task_items) {
+    imagery_task_items.forEach(function() {
       snapshot = imagery_task_items.getSnapshot();
+    
       imagery_task_itemsLoopScheduler.add(importConditions(snapshot));
       imagery_task_itemsLoopScheduler.add(imagery_taskRoutineBegin(snapshot));
       imagery_task_itemsLoopScheduler.add(imagery_taskRoutineEachFrame());
@@ -3238,7 +3283,7 @@ function imagery_task_itemsLoopBegin(imagery_task_itemsLoopScheduler, snapshot) 
       imagery_task_itemsLoopScheduler.add(restingRoutineEachFrame());
       imagery_task_itemsLoopScheduler.add(restingRoutineEnd(snapshot));
       imagery_task_itemsLoopScheduler.add(imagery_task_itemsLoopEndIteration(imagery_task_itemsLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3326,8 +3371,9 @@ function perception_task_trialLoopBegin(perception_task_trialLoopScheduler, snap
     currentLoop = perception_task_trial;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisPerception_task_trial of perception_task_trial) {
+    perception_task_trial.forEach(function() {
       snapshot = perception_task_trial.getSnapshot();
+    
       perception_task_trialLoopScheduler.add(importConditions(snapshot));
       perception_task_trialLoopScheduler.add(perception_taskRoutineBegin(snapshot));
       perception_task_trialLoopScheduler.add(perception_taskRoutineEachFrame());
@@ -3339,7 +3385,7 @@ function perception_task_trialLoopBegin(perception_task_trialLoopScheduler, snap
       perception_task_trialLoopScheduler.add(restingRoutineEachFrame());
       perception_task_trialLoopScheduler.add(restingRoutineEnd(snapshot));
       perception_task_trialLoopScheduler.add(perception_task_trialLoopEndIteration(perception_task_trialLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3395,14 +3441,15 @@ function trialsLoopBegin(trialsLoopScheduler, snapshot) {
     currentLoop = trials;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisTrial of trials) {
+    trials.forEach(function() {
       snapshot = trials.getSnapshot();
+    
       trialsLoopScheduler.add(importConditions(snapshot));
       trialsLoopScheduler.add(semantics_task_trialsRoutineBegin(snapshot));
       trialsLoopScheduler.add(semantics_task_trialsRoutineEachFrame());
       trialsLoopScheduler.add(semantics_task_trialsRoutineEnd(snapshot));
       trialsLoopScheduler.add(trialsLoopEndIteration(trialsLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3458,14 +3505,15 @@ function semanticBlockLoopBegin(semanticBlockLoopScheduler, snapshot) {
     currentLoop = semanticBlock;  // we're now the current loop
     
     // Schedule all the trials in the trialList:
-    for (const thisSemanticBlock of semanticBlock) {
+    semanticBlock.forEach(function() {
       snapshot = semanticBlock.getSnapshot();
+    
       semanticBlockLoopScheduler.add(importConditions(snapshot));
       semanticBlockLoopScheduler.add(sem_trialRoutineBegin(snapshot));
       semanticBlockLoopScheduler.add(sem_trialRoutineEachFrame());
       semanticBlockLoopScheduler.add(sem_trialRoutineEnd(snapshot));
       semanticBlockLoopScheduler.add(semanticBlockLoopEndIteration(semanticBlockLoopScheduler, snapshot));
-    }
+    });
     
     return Scheduler.Event.NEXT;
   }
@@ -3504,7 +3552,9 @@ function semanticBlockLoopEndIteration(scheduler, snapshot) {
 }
 
 
+var vviq_taskMaxDurationReached;
 var _key_resp_vviq_allKeys;
+var vviq_taskMaxDuration;
 var vviq_taskComponents;
 function vviq_taskRoutineBegin(snapshot) {
   return async function () {
@@ -3512,17 +3562,20 @@ function vviq_taskRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'vviq_task' ---
     t = 0;
-    vviq_taskClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    vviq_taskClock.reset();
+    routineTimer.reset();
+    vviq_taskMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('vviq_task.started', globalClock.getTime());
     key_resp_vviq.keys = undefined;
     key_resp_vviq.rt = undefined;
     _key_resp_vviq_allKeys = [];
     vviq_task_idx.setText(vviq_idx);
     vviq_task_item.setText(item);
     vviq_task_senario.setText(senario);
+    psychoJS.experiment.addData('vviq_task.started', globalClock.getTime());
+    vviq_taskMaxDuration = null
     // keep track of which components have finished
     vviq_taskComponents = [];
     vviq_taskComponents.push(vviq_task_title);
@@ -3532,9 +3585,10 @@ function vviq_taskRoutineBegin(snapshot) {
     vviq_taskComponents.push(vviq_task_item);
     vviq_taskComponents.push(vviq_task_senario);
     
-    for (const thisComponent of vviq_taskComponents)
+    vviq_taskComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3628,11 +3682,11 @@ function vviq_taskRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of vviq_taskComponents)
+    vviq_taskComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3647,11 +3701,11 @@ function vviq_taskRoutineEachFrame() {
 function vviq_taskRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'vviq_task' ---
-    for (const thisComponent of vviq_taskComponents) {
+    vviq_taskComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('vviq_task.stopped', globalClock.getTime());
     // update the trial handler
     if (currentLoop instanceof MultiStairHandler) {
@@ -3677,9 +3731,11 @@ function vviq_taskRoutineEnd(snapshot) {
 }
 
 
+var vviq_feedbackMaxDurationReached;
 var responses;
 var subBlock;
 var _vviq_feedback_response_allKeys;
+var vviq_feedbackMaxDuration;
 var vviq_feedbackComponents;
 function vviq_feedbackRoutineBegin(snapshot) {
   return async function () {
@@ -3687,11 +3743,12 @@ function vviq_feedbackRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'vviq_feedback' ---
     t = 0;
-    vviq_feedbackClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    vviq_feedbackClock.reset();
+    routineTimer.reset();
+    vviq_feedbackMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('vviq_feedback.started', globalClock.getTime());
     // Run 'Begin Routine' code from vviq_feedback_text
     responses = psychoJS.experiment._trialsData;
     subBlock = responses.slice(previousLength);
@@ -3723,6 +3780,8 @@ function vviq_feedbackRoutineBegin(snapshot) {
     vviq_feedback_response.keys = undefined;
     vviq_feedback_response.rt = undefined;
     _vviq_feedback_response_allKeys = [];
+    psychoJS.experiment.addData('vviq_feedback.started', globalClock.getTime());
+    vviq_feedbackMaxDuration = null
     // keep track of which components have finished
     vviq_feedbackComponents = [];
     vviq_feedbackComponents.push(vviq_feedback_title);
@@ -3730,9 +3789,10 @@ function vviq_feedbackRoutineBegin(snapshot) {
     vviq_feedbackComponents.push(vviq_feedback_response);
     vviq_feedbackComponents.push(vviq_feedback_result);
     
-    for (const thisComponent of vviq_feedbackComponents)
+    vviq_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3811,11 +3871,11 @@ function vviq_feedbackRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of vviq_feedbackComponents)
+    vviq_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3830,11 +3890,11 @@ function vviq_feedbackRoutineEachFrame() {
 function vviq_feedbackRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'vviq_feedback' ---
-    for (const thisComponent of vviq_feedbackComponents) {
+    vviq_feedbackComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('vviq_feedback.stopped', globalClock.getTime());
     vviq_feedback_response.stop();
     // the Routine "vviq_feedback" was not non-slip safe, so reset the non-slip timer
@@ -3849,7 +3909,9 @@ function vviq_feedbackRoutineEnd(snapshot) {
 }
 
 
+var imagery_instructionMaxDurationReached;
 var _imagery_instruction_proceed_2_allKeys;
+var imagery_instructionMaxDuration;
 var imagery_instructionComponents;
 function imagery_instructionRoutineBegin(snapshot) {
   return async function () {
@@ -3857,14 +3919,17 @@ function imagery_instructionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_instruction' ---
     t = 0;
-    imagery_instructionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_instructionClock.reset();
+    routineTimer.reset();
+    imagery_instructionMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_instruction.started', globalClock.getTime());
     imagery_instruction_proceed_2.keys = undefined;
     imagery_instruction_proceed_2.rt = undefined;
     _imagery_instruction_proceed_2_allKeys = [];
+    psychoJS.experiment.addData('imagery_instruction.started', globalClock.getTime());
+    imagery_instructionMaxDuration = null
     // keep track of which components have finished
     imagery_instructionComponents = [];
     imagery_instructionComponents.push(imagery_instruction_title);
@@ -3872,9 +3937,10 @@ function imagery_instructionRoutineBegin(snapshot) {
     imagery_instructionComponents.push(imagery_instruction_proceed);
     imagery_instructionComponents.push(imagery_instruction_proceed_2);
     
-    for (const thisComponent of imagery_instructionComponents)
+    imagery_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -3948,11 +4014,11 @@ function imagery_instructionRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_instructionComponents)
+    imagery_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -3967,11 +4033,11 @@ function imagery_instructionRoutineEachFrame() {
 function imagery_instructionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_instruction' ---
-    for (const thisComponent of imagery_instructionComponents) {
+    imagery_instructionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_instruction.stopped', globalClock.getTime());
     imagery_instruction_proceed_2.stop();
     // the Routine "imagery_instruction" was not non-slip safe, so reset the non-slip timer
@@ -3986,7 +4052,9 @@ function imagery_instructionRoutineEnd(snapshot) {
 }
 
 
+var imagery_task_trialsMaxDurationReached;
 var _imagery_task_trials_response_allKeys;
+var imagery_task_trialsMaxDuration;
 var imagery_task_trialsComponents;
 function imagery_task_trialsRoutineBegin(snapshot) {
   return async function () {
@@ -3994,11 +4062,12 @@ function imagery_task_trialsRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_task_trials' ---
     t = 0;
-    imagery_task_trialsClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_task_trialsClock.reset();
+    routineTimer.reset();
+    imagery_task_trialsMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_task_trials.started', globalClock.getTime());
     imagery_task_trials_question.setText(task_question);
     imagery_task_trials_word1.setValue(word1);
     imagery_task_trials_word1.secs=2;
@@ -4014,6 +4083,8 @@ function imagery_task_trialsRoutineBegin(snapshot) {
     imagery_task_trials_order_instruction.setText(order_instruction);
     imagery_task_trials_img1.setImage(img1);
     imagery_task_trials_proceed.setText(task_continue);
+    psychoJS.experiment.addData('imagery_task_trials.started', globalClock.getTime());
+    imagery_task_trialsMaxDuration = null
     // keep track of which components have finished
     imagery_task_trialsComponents = [];
     imagery_task_trialsComponents.push(imagery_task_trials_question);
@@ -4025,9 +4096,10 @@ function imagery_task_trialsRoutineBegin(snapshot) {
     imagery_task_trialsComponents.push(imagery_task_trials_img1);
     imagery_task_trialsComponents.push(imagery_task_trials_proceed);
     
-    for (const thisComponent of imagery_task_trialsComponents)
+    imagery_task_trialsComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4060,7 +4132,7 @@ function imagery_task_trialsRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ imagery_task_trials_word1.play(); });  // screen flip
       imagery_task_trials_word1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (imagery_task_trials_word1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= imagery_task_trials_word1.tStart + 0.5) {
         imagery_task_trials_word1.stop();  // stop the sound (if longer than duration)
@@ -4076,7 +4148,7 @@ function imagery_task_trialsRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ imagery_task_trials_word2.play(); });  // screen flip
       imagery_task_trials_word2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (imagery_task_trials_word2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= imagery_task_trials_word2.tStart + 0.5) {
         imagery_task_trials_word2.stop();  // stop the sound (if longer than duration)
@@ -4157,11 +4229,11 @@ function imagery_task_trialsRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_task_trialsComponents)
+    imagery_task_trialsComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4176,11 +4248,11 @@ function imagery_task_trialsRoutineEachFrame() {
 function imagery_task_trialsRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_task_trials' ---
-    for (const thisComponent of imagery_task_trialsComponents) {
+    imagery_task_trialsComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_task_trials.stopped', globalClock.getTime());
     imagery_task_trials_word1.stop();  // ensure sound has stopped at end of Routine
     imagery_task_trials_word2.stop();  // ensure sound has stopped at end of Routine
@@ -4198,7 +4270,9 @@ function imagery_task_trialsRoutineEnd(snapshot) {
 }
 
 
+var imagery_task_trials_vividnessMaxDurationReached;
 var _imagery_task_trials_vividness_response_allKeys;
+var imagery_task_trials_vividnessMaxDuration;
 var imagery_task_trials_vividnessComponents;
 function imagery_task_trials_vividnessRoutineBegin(snapshot) {
   return async function () {
@@ -4206,25 +4280,29 @@ function imagery_task_trials_vividnessRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_task_trials_vividness' ---
     t = 0;
-    imagery_task_trials_vividnessClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_task_trials_vividnessClock.reset();
+    routineTimer.reset();
+    imagery_task_trials_vividnessMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_task_trials_vividness.started', globalClock.getTime());
     imagery_task_trials_vividness_question.setText(task_question);
     imagery_task_trials_vividness_text.setText(task_vividness);
     imagery_task_trials_vividness_response.keys = undefined;
     imagery_task_trials_vividness_response.rt = undefined;
     _imagery_task_trials_vividness_response_allKeys = [];
+    psychoJS.experiment.addData('imagery_task_trials_vividness.started', globalClock.getTime());
+    imagery_task_trials_vividnessMaxDuration = null
     // keep track of which components have finished
     imagery_task_trials_vividnessComponents = [];
     imagery_task_trials_vividnessComponents.push(imagery_task_trials_vividness_question);
     imagery_task_trials_vividnessComponents.push(imagery_task_trials_vividness_text);
     imagery_task_trials_vividnessComponents.push(imagery_task_trials_vividness_response);
     
-    for (const thisComponent of imagery_task_trials_vividnessComponents)
+    imagery_task_trials_vividnessComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4288,11 +4366,11 @@ function imagery_task_trials_vividnessRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_task_trials_vividnessComponents)
+    imagery_task_trials_vividnessComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4307,11 +4385,11 @@ function imagery_task_trials_vividnessRoutineEachFrame() {
 function imagery_task_trials_vividnessRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_task_trials_vividness' ---
-    for (const thisComponent of imagery_task_trials_vividnessComponents) {
+    imagery_task_trials_vividnessComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_task_trials_vividness.stopped', globalClock.getTime());
     imagery_task_trials_vividness_response.stop();
     // the Routine "imagery_task_trials_vividness" was not non-slip safe, so reset the non-slip timer
@@ -4326,6 +4404,8 @@ function imagery_task_trials_vividnessRoutineEnd(snapshot) {
 }
 
 
+var restingMaxDurationReached;
+var restingMaxDuration;
 var restingComponents;
 function restingRoutineBegin(snapshot) {
   return async function () {
@@ -4333,19 +4413,22 @@ function restingRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'resting' ---
     t = 0;
-    restingClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    restingClock.reset(routineTimer.getTime());
     routineTimer.add(0.500000);
+    restingMaxDurationReached = false;
     // update component parameters for each repeat
     psychoJS.experiment.addData('resting.started', globalClock.getTime());
+    restingMaxDuration = null
     // keep track of which components have finished
     restingComponents = [];
     restingComponents.push(imagery_task_trials_rest);
     
-    for (const thisComponent of restingComponents)
+    restingComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4368,21 +4451,22 @@ function restingRoutineEachFrame() {
       imagery_task_trials_rest.setAutoDraw(true);
     }
     
-    frameRemains = 0.0 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 0.5 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (imagery_task_trials_rest.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       imagery_task_trials_rest.setAutoDraw(false);
     }
+    
     // check if the Routine should terminate
     if (!continueRoutine) {  // a component has requested a forced-end of Routine
       return Scheduler.Event.NEXT;
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of restingComponents)
+    restingComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -4397,12 +4481,17 @@ function restingRoutineEachFrame() {
 function restingRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'resting' ---
-    for (const thisComponent of restingComponents) {
+    restingComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('resting.stopped', globalClock.getTime());
+    if (restingMaxDurationReached) {
+        restingClock.add(restingMaxDuration);
+    } else {
+        restingClock.add(0.500000);
+    }
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
@@ -4412,7 +4501,9 @@ function restingRoutineEnd(snapshot) {
 }
 
 
+var imagery_task_prepareMaxDurationReached;
 var _imagery_task_prepare_response_allKeys;
+var imagery_task_prepareMaxDuration;
 var imagery_task_prepareComponents;
 function imagery_task_prepareRoutineBegin(snapshot) {
   return async function () {
@@ -4420,14 +4511,17 @@ function imagery_task_prepareRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_task_prepare' ---
     t = 0;
-    imagery_task_prepareClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_task_prepareClock.reset();
+    routineTimer.reset();
+    imagery_task_prepareMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_task_prepare.started', globalClock.getTime());
     imagery_task_prepare_response.keys = undefined;
     imagery_task_prepare_response.rt = undefined;
     _imagery_task_prepare_response_allKeys = [];
+    psychoJS.experiment.addData('imagery_task_prepare.started', globalClock.getTime());
+    imagery_task_prepareMaxDuration = null
     // keep track of which components have finished
     imagery_task_prepareComponents = [];
     imagery_task_prepareComponents.push(imagery_task_prepare_title);
@@ -4435,9 +4529,10 @@ function imagery_task_prepareRoutineBegin(snapshot) {
     imagery_task_prepareComponents.push(imagery_task_prepare_response);
     imagery_task_prepareComponents.push(imagery_task_prepare_proceed);
     
-    for (const thisComponent of imagery_task_prepareComponents)
+    imagery_task_prepareComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4511,11 +4606,11 @@ function imagery_task_prepareRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_task_prepareComponents)
+    imagery_task_prepareComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4530,11 +4625,11 @@ function imagery_task_prepareRoutineEachFrame() {
 function imagery_task_prepareRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_task_prepare' ---
-    for (const thisComponent of imagery_task_prepareComponents) {
+    imagery_task_prepareComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_task_prepare.stopped', globalClock.getTime());
     imagery_task_prepare_response.stop();
     // the Routine "imagery_task_prepare" was not non-slip safe, so reset the non-slip timer
@@ -4549,7 +4644,9 @@ function imagery_task_prepareRoutineEnd(snapshot) {
 }
 
 
+var imagery_taskMaxDurationReached;
 var _key_resp_vmi_allKeys;
+var imagery_taskMaxDuration;
 var imagery_taskComponents;
 function imagery_taskRoutineBegin(snapshot) {
   return async function () {
@@ -4557,11 +4654,12 @@ function imagery_taskRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_task' ---
     t = 0;
-    imagery_taskClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_taskClock.reset();
+    routineTimer.reset();
+    imagery_taskMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_task.started', globalClock.getTime());
     imagery_task_idx.setText(imagery_task_items.thisN);
     imagery_task_word1.setValue(word1);
     imagery_task_word1.secs=2;
@@ -4575,6 +4673,8 @@ function imagery_taskRoutineBegin(snapshot) {
     key_resp_vmi.keys = undefined;
     key_resp_vmi.rt = undefined;
     _key_resp_vmi_allKeys = [];
+    psychoJS.experiment.addData('imagery_task.started', globalClock.getTime());
+    imagery_taskMaxDuration = null
     // keep track of which components have finished
     imagery_taskComponents = [];
     imagery_taskComponents.push(imagery_task_title);
@@ -4585,9 +4685,10 @@ function imagery_taskRoutineBegin(snapshot) {
     imagery_taskComponents.push(imagery_task_text);
     imagery_taskComponents.push(key_resp_vmi);
     
-    for (const thisComponent of imagery_taskComponents)
+    imagery_taskComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4629,7 +4730,7 @@ function imagery_taskRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ imagery_task_word1.play(); });  // screen flip
       imagery_task_word1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (imagery_task_word1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= imagery_task_word1.tStart + 0.5) {
         imagery_task_word1.stop();  // stop the sound (if longer than duration)
@@ -4645,7 +4746,7 @@ function imagery_taskRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ imagery_task_word2.play(); });  // screen flip
       imagery_task_word2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (imagery_task_word2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= imagery_task_word2.tStart + 0.5) {
         imagery_task_word2.stop();  // stop the sound (if longer than duration)
@@ -4712,11 +4813,11 @@ function imagery_taskRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_taskComponents)
+    imagery_taskComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4731,11 +4832,11 @@ function imagery_taskRoutineEachFrame() {
 function imagery_taskRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_task' ---
-    for (const thisComponent of imagery_taskComponents) {
+    imagery_taskComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_task.stopped', globalClock.getTime());
     imagery_task_word1.stop();  // ensure sound has stopped at end of Routine
     imagery_task_word2.stop();  // ensure sound has stopped at end of Routine
@@ -4774,7 +4875,9 @@ function imagery_taskRoutineEnd(snapshot) {
 }
 
 
+var imagery_task_vividnessMaxDurationReached;
 var _vividness_allKeys;
+var imagery_task_vividnessMaxDuration;
 var imagery_task_vividnessComponents;
 function imagery_task_vividnessRoutineBegin(snapshot) {
   return async function () {
@@ -4782,22 +4885,26 @@ function imagery_task_vividnessRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_task_vividness' ---
     t = 0;
-    imagery_task_vividnessClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_task_vividnessClock.reset();
+    routineTimer.reset();
+    imagery_task_vividnessMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_task_vividness.started', globalClock.getTime());
     vividness.keys = undefined;
     vividness.rt = undefined;
     _vividness_allKeys = [];
+    psychoJS.experiment.addData('imagery_task_vividness.started', globalClock.getTime());
+    imagery_task_vividnessMaxDuration = null
     // keep track of which components have finished
     imagery_task_vividnessComponents = [];
     imagery_task_vividnessComponents.push(imagery_task_vividness_title);
     imagery_task_vividnessComponents.push(vividness);
     
-    for (const thisComponent of imagery_task_vividnessComponents)
+    imagery_task_vividnessComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -4851,11 +4958,11 @@ function imagery_task_vividnessRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_task_vividnessComponents)
+    imagery_task_vividnessComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -4870,11 +4977,11 @@ function imagery_task_vividnessRoutineEachFrame() {
 function imagery_task_vividnessRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_task_vividness' ---
-    for (const thisComponent of imagery_task_vividnessComponents) {
+    imagery_task_vividnessComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_task_vividness.stopped', globalClock.getTime());
     // update the trial handler
     if (currentLoop instanceof MultiStairHandler) {
@@ -4900,8 +5007,10 @@ function imagery_task_vividnessRoutineEnd(snapshot) {
 }
 
 
+var imagery_task_feedbackMaxDurationReached;
 var corrRate;
 var _imagery_task_feedback_response_allKeys;
+var imagery_task_feedbackMaxDuration;
 var imagery_task_feedbackComponents;
 function imagery_task_feedbackRoutineBegin(snapshot) {
   return async function () {
@@ -4909,11 +5018,12 @@ function imagery_task_feedbackRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'imagery_task_feedback' ---
     t = 0;
-    imagery_task_feedbackClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    imagery_task_feedbackClock.reset();
+    routineTimer.reset();
+    imagery_task_feedbackMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('imagery_task_feedback.started', globalClock.getTime());
     // Run 'Begin Routine' code from imagery_task_feedback_text
     responses = psychoJS.experiment._trialsData;
     subBlock = responses.slice(previousLength + 1);
@@ -4961,6 +5071,8 @@ function imagery_task_feedbackRoutineBegin(snapshot) {
     imagery_task_feedback_response.keys = undefined;
     imagery_task_feedback_response.rt = undefined;
     _imagery_task_feedback_response_allKeys = [];
+    psychoJS.experiment.addData('imagery_task_feedback.started', globalClock.getTime());
+    imagery_task_feedbackMaxDuration = null
     // keep track of which components have finished
     imagery_task_feedbackComponents = [];
     imagery_task_feedbackComponents.push(imagery_task_feedback_title);
@@ -4968,9 +5080,10 @@ function imagery_task_feedbackRoutineBegin(snapshot) {
     imagery_task_feedbackComponents.push(imagery_task_feedback_response);
     imagery_task_feedbackComponents.push(imagery_task_feedback_proceed);
     
-    for (const thisComponent of imagery_task_feedbackComponents)
+    imagery_task_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -5049,11 +5162,11 @@ function imagery_task_feedbackRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of imagery_task_feedbackComponents)
+    imagery_task_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5068,11 +5181,11 @@ function imagery_task_feedbackRoutineEachFrame() {
 function imagery_task_feedbackRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'imagery_task_feedback' ---
-    for (const thisComponent of imagery_task_feedbackComponents) {
+    imagery_task_feedbackComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('imagery_task_feedback.stopped', globalClock.getTime());
     imagery_task_feedback_response.stop();
     // the Routine "imagery_task_feedback" was not non-slip safe, so reset the non-slip timer
@@ -5087,7 +5200,9 @@ function imagery_task_feedbackRoutineEnd(snapshot) {
 }
 
 
+var perception_instructionMaxDurationReached;
 var _perception_instruction_response_allKeys;
+var perception_instructionMaxDuration;
 var perception_instructionComponents;
 function perception_instructionRoutineBegin(snapshot) {
   return async function () {
@@ -5095,14 +5210,17 @@ function perception_instructionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'perception_instruction' ---
     t = 0;
-    perception_instructionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    perception_instructionClock.reset();
+    routineTimer.reset();
+    perception_instructionMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('perception_instruction.started', globalClock.getTime());
     perception_instruction_response.keys = undefined;
     perception_instruction_response.rt = undefined;
     _perception_instruction_response_allKeys = [];
+    psychoJS.experiment.addData('perception_instruction.started', globalClock.getTime());
+    perception_instructionMaxDuration = null
     // keep track of which components have finished
     perception_instructionComponents = [];
     perception_instructionComponents.push(perception_instruction_title);
@@ -5110,9 +5228,10 @@ function perception_instructionRoutineBegin(snapshot) {
     perception_instructionComponents.push(perception_instruction_response);
     perception_instructionComponents.push(perception_instruction_proceed);
     
-    for (const thisComponent of perception_instructionComponents)
+    perception_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -5186,11 +5305,11 @@ function perception_instructionRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of perception_instructionComponents)
+    perception_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5205,11 +5324,11 @@ function perception_instructionRoutineEachFrame() {
 function perception_instructionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'perception_instruction' ---
-    for (const thisComponent of perception_instructionComponents) {
+    perception_instructionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('perception_instruction.stopped', globalClock.getTime());
     perception_instruction_response.stop();
     // the Routine "perception_instruction" was not non-slip safe, so reset the non-slip timer
@@ -5224,7 +5343,9 @@ function perception_instructionRoutineEnd(snapshot) {
 }
 
 
+var perception_taskMaxDurationReached;
 var _perception_allKeys;
+var perception_taskMaxDuration;
 var perception_taskComponents;
 function perception_taskRoutineBegin(snapshot) {
   return async function () {
@@ -5232,11 +5353,12 @@ function perception_taskRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'perception_task' ---
     t = 0;
-    perception_taskClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    perception_taskClock.reset();
+    routineTimer.reset();
+    perception_taskMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('perception_task.started', globalClock.getTime());
     perception_task_word1.setValue(word1);
     perception_task_word1.secs=2;
     perception_task_word1.setVolume(8);
@@ -5252,6 +5374,8 @@ function perception_taskRoutineBegin(snapshot) {
     perception.rt = undefined;
     _perception_allKeys = [];
     perception_task_text.setText('Give your answer: first (key "1") or second (key "2").');
+    psychoJS.experiment.addData('perception_task.started', globalClock.getTime());
+    perception_taskMaxDuration = null
     // keep track of which components have finished
     perception_taskComponents = [];
     perception_taskComponents.push(perception_task_title);
@@ -5264,9 +5388,10 @@ function perception_taskRoutineBegin(snapshot) {
     perception_taskComponents.push(perception);
     perception_taskComponents.push(perception_task_text);
     
-    for (const thisComponent of perception_taskComponents)
+    perception_taskComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -5298,7 +5423,7 @@ function perception_taskRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ perception_task_word1.play(); });  // screen flip
       perception_task_word1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (perception_task_word1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= perception_task_word1.tStart + 0.5) {
         perception_task_word1.stop();  // stop the sound (if longer than duration)
@@ -5315,10 +5440,11 @@ function perception_taskRoutineEachFrame() {
       perception_task_img1.setAutoDraw(true);
     }
     
-    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (perception_task_img1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       perception_task_img1.setAutoDraw(false);
     }
+    
     // start/stop perception_task_word2
     if (t >= 2 && perception_task_word2.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -5328,7 +5454,7 @@ function perception_taskRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ perception_task_word2.play(); });  // screen flip
       perception_task_word2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (perception_task_word2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= perception_task_word2.tStart + 0.5) {
         perception_task_word2.stop();  // stop the sound (if longer than duration)
@@ -5345,10 +5471,11 @@ function perception_taskRoutineEachFrame() {
       perception_task_img2.setAutoDraw(true);
     }
     
-    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (perception_task_img2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       perception_task_img2.setAutoDraw(false);
     }
+    
     // start/stop perception_task_instruction
     if (t >= 4 && perception_task_instruction.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
@@ -5419,11 +5546,11 @@ function perception_taskRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of perception_taskComponents)
+    perception_taskComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5438,11 +5565,11 @@ function perception_taskRoutineEachFrame() {
 function perception_taskRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'perception_task' ---
-    for (const thisComponent of perception_taskComponents) {
+    perception_taskComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('perception_task.stopped', globalClock.getTime());
     perception_task_word1.stop();  // ensure sound has stopped at end of Routine
     perception_task_word2.stop();  // ensure sound has stopped at end of Routine
@@ -5481,7 +5608,9 @@ function perception_taskRoutineEnd(snapshot) {
 }
 
 
+var perception_task_confidenceMaxDurationReached;
 var _confidence_allKeys;
+var perception_task_confidenceMaxDuration;
 var perception_task_confidenceComponents;
 function perception_task_confidenceRoutineBegin(snapshot) {
   return async function () {
@@ -5489,24 +5618,28 @@ function perception_task_confidenceRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'perception_task_confidence' ---
     t = 0;
-    perception_task_confidenceClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    perception_task_confidenceClock.reset();
+    routineTimer.reset();
+    perception_task_confidenceMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('perception_task_confidence.started', globalClock.getTime());
     perception_task_confidence_idx.setText(perception_task_trial.thisN);
     confidence.keys = undefined;
     confidence.rt = undefined;
     _confidence_allKeys = [];
+    psychoJS.experiment.addData('perception_task_confidence.started', globalClock.getTime());
+    perception_task_confidenceMaxDuration = null
     // keep track of which components have finished
     perception_task_confidenceComponents = [];
     perception_task_confidenceComponents.push(perception_task_confidence_idx);
     perception_task_confidenceComponents.push(perception_task_confidence_text);
     perception_task_confidenceComponents.push(confidence);
     
-    for (const thisComponent of perception_task_confidenceComponents)
+    perception_task_confidenceComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -5570,11 +5703,11 @@ function perception_task_confidenceRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of perception_task_confidenceComponents)
+    perception_task_confidenceComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5589,11 +5722,11 @@ function perception_task_confidenceRoutineEachFrame() {
 function perception_task_confidenceRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'perception_task_confidence' ---
-    for (const thisComponent of perception_task_confidenceComponents) {
+    perception_task_confidenceComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('perception_task_confidence.stopped', globalClock.getTime());
     // update the trial handler
     if (currentLoop instanceof MultiStairHandler) {
@@ -5619,7 +5752,9 @@ function perception_task_confidenceRoutineEnd(snapshot) {
 }
 
 
+var perception_task_feedbackMaxDurationReached;
 var _perception_task_feedback_response_allKeys;
+var perception_task_feedbackMaxDuration;
 var perception_task_feedbackComponents;
 function perception_task_feedbackRoutineBegin(snapshot) {
   return async function () {
@@ -5627,11 +5762,12 @@ function perception_task_feedbackRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'perception_task_feedback' ---
     t = 0;
-    perception_task_feedbackClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    perception_task_feedbackClock.reset();
+    routineTimer.reset();
+    perception_task_feedbackMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('perception_task_feedback.started', globalClock.getTime());
     // Run 'Begin Routine' code from perception_task_feedback_text
     
     responses = psychoJS.experiment._trialsData;
@@ -5680,6 +5816,8 @@ function perception_task_feedbackRoutineBegin(snapshot) {
     perception_task_feedback_response.keys = undefined;
     perception_task_feedback_response.rt = undefined;
     _perception_task_feedback_response_allKeys = [];
+    psychoJS.experiment.addData('perception_task_feedback.started', globalClock.getTime());
+    perception_task_feedbackMaxDuration = null
     // keep track of which components have finished
     perception_task_feedbackComponents = [];
     perception_task_feedbackComponents.push(perception_task_feedback_title);
@@ -5687,9 +5825,10 @@ function perception_task_feedbackRoutineBegin(snapshot) {
     perception_task_feedbackComponents.push(perception_task_feedback_response);
     perception_task_feedbackComponents.push(perception_task_feedback_proceed);
     
-    for (const thisComponent of perception_task_feedbackComponents)
+    perception_task_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -5768,11 +5907,11 @@ function perception_task_feedbackRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of perception_task_feedbackComponents)
+    perception_task_feedbackComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5787,11 +5926,11 @@ function perception_task_feedbackRoutineEachFrame() {
 function perception_task_feedbackRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'perception_task_feedback' ---
-    for (const thisComponent of perception_task_feedbackComponents) {
+    perception_task_feedbackComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('perception_task_feedback.stopped', globalClock.getTime());
     perception_task_feedback_response.stop();
     // the Routine "perception_task_feedback" was not non-slip safe, so reset the non-slip timer
@@ -5806,7 +5945,9 @@ function perception_task_feedbackRoutineEnd(snapshot) {
 }
 
 
+var sem_instructionMaxDurationReached;
 var _semantics_instruction_response_allKeys;
+var sem_instructionMaxDuration;
 var sem_instructionComponents;
 function sem_instructionRoutineBegin(snapshot) {
   return async function () {
@@ -5814,14 +5955,17 @@ function sem_instructionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'sem_instruction' ---
     t = 0;
-    sem_instructionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    sem_instructionClock.reset();
+    routineTimer.reset();
+    sem_instructionMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('sem_instruction.started', globalClock.getTime());
     semantics_instruction_response.keys = undefined;
     semantics_instruction_response.rt = undefined;
     _semantics_instruction_response_allKeys = [];
+    psychoJS.experiment.addData('sem_instruction.started', globalClock.getTime());
+    sem_instructionMaxDuration = null
     // keep track of which components have finished
     sem_instructionComponents = [];
     sem_instructionComponents.push(semantics_instruction_title);
@@ -5829,9 +5973,10 @@ function sem_instructionRoutineBegin(snapshot) {
     sem_instructionComponents.push(semantics_instruction_response);
     sem_instructionComponents.push(semantics_instruction_proceed);
     
-    for (const thisComponent of sem_instructionComponents)
+    sem_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -5905,11 +6050,11 @@ function sem_instructionRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of sem_instructionComponents)
+    sem_instructionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -5924,11 +6069,11 @@ function sem_instructionRoutineEachFrame() {
 function sem_instructionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'sem_instruction' ---
-    for (const thisComponent of sem_instructionComponents) {
+    sem_instructionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('sem_instruction.stopped', globalClock.getTime());
     semantics_instruction_response.stop();
     // the Routine "sem_instruction" was not non-slip safe, so reset the non-slip timer
@@ -5943,7 +6088,9 @@ function sem_instructionRoutineEnd(snapshot) {
 }
 
 
+var semantics_task_trialsMaxDurationReached;
 var _semantics_task_trials_response_allKeys;
+var semantics_task_trialsMaxDuration;
 var semantics_task_trialsComponents;
 function semantics_task_trialsRoutineBegin(snapshot) {
   return async function () {
@@ -5951,11 +6098,12 @@ function semantics_task_trialsRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'semantics_task_trials' ---
     t = 0;
-    semantics_task_trialsClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    semantics_task_trialsClock.reset();
+    routineTimer.reset();
+    semantics_task_trialsMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('semantics_task_trials.started', globalClock.getTime());
     semantics_task_trials_question.setText(task_question);
     semantics_task_trials_word1.setValue(word1);
     semantics_task_trials_word1.secs=2;
@@ -5970,6 +6118,8 @@ function semantics_task_trialsRoutineBegin(snapshot) {
     _semantics_task_trials_response_allKeys = [];
     semantics_task_trials_order_instruction.setText(order_instruction);
     semantics_task_trials_proceed.setText(task_continue);
+    psychoJS.experiment.addData('semantics_task_trials.started', globalClock.getTime());
+    semantics_task_trialsMaxDuration = null
     // keep track of which components have finished
     semantics_task_trialsComponents = [];
     semantics_task_trialsComponents.push(semantics_task_trials_question);
@@ -5980,9 +6130,10 @@ function semantics_task_trialsRoutineBegin(snapshot) {
     semantics_task_trialsComponents.push(semantics_task_trials_order_instruction);
     semantics_task_trialsComponents.push(semantics_task_trials_proceed);
     
-    for (const thisComponent of semantics_task_trialsComponents)
+    semantics_task_trialsComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -6014,7 +6165,7 @@ function semantics_task_trialsRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ semantics_task_trials_word1.play(); });  // screen flip
       semantics_task_trials_word1.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (semantics_task_trials_word1.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= semantics_task_trials_word1.tStart + 0.5) {
         semantics_task_trials_word1.stop();  // stop the sound (if longer than duration)
@@ -6030,7 +6181,7 @@ function semantics_task_trialsRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ semantics_task_trials_word2.play(); });  // screen flip
       semantics_task_trials_word2.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (semantics_task_trials_word2.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= semantics_task_trials_word2.tStart + 0.5) {
         semantics_task_trials_word2.stop();  // stop the sound (if longer than duration)
@@ -6101,11 +6252,11 @@ function semantics_task_trialsRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of semantics_task_trialsComponents)
+    semantics_task_trialsComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -6120,11 +6271,11 @@ function semantics_task_trialsRoutineEachFrame() {
 function semantics_task_trialsRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'semantics_task_trials' ---
-    for (const thisComponent of semantics_task_trialsComponents) {
+    semantics_task_trialsComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('semantics_task_trials.stopped', globalClock.getTime());
     semantics_task_trials_word1.stop();  // ensure sound has stopped at end of Routine
     semantics_task_trials_word2.stop();  // ensure sound has stopped at end of Routine
@@ -6142,7 +6293,9 @@ function semantics_task_trialsRoutineEnd(snapshot) {
 }
 
 
+var sem_trialMaxDurationReached;
 var _key_resp_vmi_s_allKeys;
+var sem_trialMaxDuration;
 var sem_trialComponents;
 function sem_trialRoutineBegin(snapshot) {
   return async function () {
@@ -6150,11 +6303,12 @@ function sem_trialRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'sem_trial' ---
     t = 0;
-    sem_trialClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    sem_trialClock.reset();
+    routineTimer.reset();
+    sem_trialMaxDurationReached = false;
     // update component parameters for each repeat
-    psychoJS.experiment.addData('sem_trial.started', globalClock.getTime());
     semanticBlock_idx.setText(semanticBlock.thisN);
     field_s.setValue(field);
     field_s.secs=2;
@@ -6170,6 +6324,8 @@ function sem_trialRoutineBegin(snapshot) {
     key_resp_vmi_s.keys = undefined;
     key_resp_vmi_s.rt = undefined;
     _key_resp_vmi_s_allKeys = [];
+    psychoJS.experiment.addData('sem_trial.started', globalClock.getTime());
+    sem_trialMaxDuration = null
     // keep track of which components have finished
     sem_trialComponents = [];
     sem_trialComponents.push(semantics_task_title);
@@ -6181,9 +6337,10 @@ function sem_trialRoutineBegin(snapshot) {
     sem_trialComponents.push(instr_s);
     sem_trialComponents.push(key_resp_vmi_s);
     
-    for (const thisComponent of sem_trialComponents)
+    sem_trialComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -6235,7 +6392,7 @@ function sem_trialRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ field_s.play(); });  // screen flip
       field_s.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0.0 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (field_s.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= field_s.tStart + 0.5) {
         field_s.stop();  // stop the sound (if longer than duration)
@@ -6251,7 +6408,7 @@ function sem_trialRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ word1_s.play(); });  // screen flip
       word1_s.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (word1_s.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= word1_s.tStart + 0.5) {
         word1_s.stop();  // stop the sound (if longer than duration)
@@ -6267,7 +6424,7 @@ function sem_trialRoutineEachFrame() {
       psychoJS.window.callOnFlip(function(){ word2_s.play(); });  // screen flip
       word2_s.status = PsychoJS.Status.STARTED;
     }
-    frameRemains = 4 + 2 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 4 + 2 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (word2_s.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       if (t >= word2_s.tStart + 0.5) {
         word2_s.stop();  // stop the sound (if longer than duration)
@@ -6318,11 +6475,11 @@ function sem_trialRoutineEachFrame() {
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of sem_trialComponents)
+    sem_trialComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine) {
@@ -6337,11 +6494,11 @@ function sem_trialRoutineEachFrame() {
 function sem_trialRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'sem_trial' ---
-    for (const thisComponent of sem_trialComponents) {
+    sem_trialComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('sem_trial.stopped', globalClock.getTime());
     field_s.stop();  // ensure sound has stopped at end of Routine
     word1_s.stop();  // ensure sound has stopped at end of Routine
@@ -6371,6 +6528,8 @@ function sem_trialRoutineEnd(snapshot) {
 }
 
 
+var end_sessionMaxDurationReached;
+var end_sessionMaxDuration;
 var end_sessionComponents;
 function end_sessionRoutineBegin(snapshot) {
   return async function () {
@@ -6378,19 +6537,22 @@ function end_sessionRoutineBegin(snapshot) {
     
     //--- Prepare to start Routine 'end_session' ---
     t = 0;
-    end_sessionClock.reset(); // clock
     frameN = -1;
     continueRoutine = true; // until we're told otherwise
+    end_sessionClock.reset(routineTimer.getTime());
     routineTimer.add(6.000000);
+    end_sessionMaxDurationReached = false;
     // update component parameters for each repeat
     psychoJS.experiment.addData('end_session.started', globalClock.getTime());
+    end_sessionMaxDuration = null
     // keep track of which components have finished
     end_sessionComponents = [];
     end_sessionComponents.push(end_session_text);
     
-    for (const thisComponent of end_sessionComponents)
+    end_sessionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent)
         thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
     return Scheduler.Event.NEXT;
   }
 }
@@ -6413,21 +6575,22 @@ function end_sessionRoutineEachFrame() {
       end_session_text.setAutoDraw(true);
     }
     
-    frameRemains = 0 + 6 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 6 - psychoJS.window.monitorFramePeriod * 0.75;// most of one frame period left
     if (end_session_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_session_text.setAutoDraw(false);
     }
+    
     // check if the Routine should terminate
     if (!continueRoutine) {  // a component has requested a forced-end of Routine
       return Scheduler.Event.NEXT;
     }
     
     continueRoutine = false;  // reverts to True if at least one component still running
-    for (const thisComponent of end_sessionComponents)
+    end_sessionComponents.forEach( function(thisComponent) {
       if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
         continueRoutine = true;
-        break;
       }
+    });
     
     // refresh the screen if continuing
     if (continueRoutine && routineTimer.getTime() > 0) {
@@ -6442,12 +6605,17 @@ function end_sessionRoutineEachFrame() {
 function end_sessionRoutineEnd(snapshot) {
   return async function () {
     //--- Ending Routine 'end_session' ---
-    for (const thisComponent of end_sessionComponents) {
+    end_sessionComponents.forEach( function(thisComponent) {
       if (typeof thisComponent.setAutoDraw === 'function') {
         thisComponent.setAutoDraw(false);
       }
-    }
+    });
     psychoJS.experiment.addData('end_session.stopped', globalClock.getTime());
+    if (end_sessionMaxDurationReached) {
+        end_sessionClock.add(end_sessionMaxDuration);
+    } else {
+        end_sessionClock.add(6.000000);
+    }
     // Routines running outside a loop should always advance the datafile row
     if (currentLoop === psychoJS.experiment) {
       psychoJS.experiment.nextEntry(snapshot);
@@ -6470,18 +6638,6 @@ async function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   psychoJS.window.close();
   psychoJS.quit({message: message, isCompleted: isCompleted});
   

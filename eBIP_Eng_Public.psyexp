@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2023.2.2">
+<PsychoPy2experiment encoding="utf-8" version="2024.2.4">
   <Settings>
     <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
     <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
@@ -26,13 +26,16 @@
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[1920, 1080]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1280, 800]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
     <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
     <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="None" name="color"/>
     <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
+    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
     <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
     <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
     <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
@@ -43,16 +46,22 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="eBIP_1116" valType="str" updates="None" name="expName"/>
+    <Param val="eBIP_Eng_Public" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="ioHub" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="neon.local" valType="str" updates="None" name="plCompanionAddress"/>
+    <Param val="8080" valType="num" updates="None" name="plCompanionPort"/>
+    <Param val="True" valType="bool" updates="None" name="plCompanionRecordingEnabled"/>
     <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
     <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
     <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
@@ -61,6 +70,8 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
     <Param val="" valType="str" updates="None" name="tbModel"/>
@@ -78,6 +89,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="consent_form" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -91,6 +103,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -111,12 +124,14 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="num" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <TextComponent name="text" plugin="None">
         <Param val="green" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -135,11 +150,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="If you have read this part of the consent form and AGREE to participate, press &lt;Space&gt;.&amp;#10;If you do NOT agree to participate, press &lt;ESC&gt;." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="consent_space" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -166,6 +183,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="key_test" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -178,6 +196,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -196,6 +215,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Keyboard Calibration" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="key_test_text" plugin="None">
@@ -203,6 +223,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -221,6 +242,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="During this test, you will have to use the following keys on the TOP LEFT part of your keyboard:&amp;#10;              '1',  '2',  '3',  '4',  '5'&amp;#10;&amp;#10;Press the buttons one by one, make sure your keyboard works well.&amp;#10;&amp;#10;The button you just pressed is:&amp;#10;&amp;#10;&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="key_test_display" plugin="None">
@@ -228,6 +250,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -246,11 +269,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="" valType="str" updates="set every frame" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_test_show" plugin="None">
         <Param val="'1','2','3','4','5','left','right','space','t','b','y','g','r','comma','return'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -289,6 +314,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -307,6 +333,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="If your keyboard is working, press &lt;Enter&gt;.&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ImageComponent name="key_test_image" plugin="None">
@@ -315,6 +342,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -335,6 +363,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
     </Routine>
     <Routine name="begin_instruction">
@@ -346,6 +375,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="begin_instruction" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -358,6 +388,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -376,11 +407,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Let's start the first part of the test, are you ready?" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="begin_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -402,6 +435,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -420,6 +454,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Proceed by pressing &lt; Space &gt;." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -432,6 +467,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="volume_test" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -444,6 +480,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -462,11 +499,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Volume Calibration" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="volume_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -488,6 +527,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -506,6 +546,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Make sure you can hear the music and that the volume is correct.&amp;#10;&amp;#10;We recommend that you wear headphones for this test and turn the sound up to a comfortable level for you." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="volume_continue" plugin="None">
@@ -513,6 +554,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -531,6 +573,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press the &lt; Space &gt; key to continue. &amp;#10;If you don't hear the music, press the &lt;Esc&gt; key.&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="volume_align" plugin="None">
@@ -551,12 +594,14 @@
         <Param val="volume_align" valType="code" updates="None" name="name"/>
       </CodeComponent>
       <SoundComponent name="sound_1" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="sound_1" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="audioStims/mariotest2.wav" valType="str" updates="constant" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -576,6 +621,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="vivid_instruction" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -588,6 +634,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -606,11 +653,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 1/4: Evaluation of Vividness of mental imagery  " valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="vivid_response" plugin="None">
         <Param val="'1','2','3','4','5'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -632,6 +681,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -650,6 +700,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="For example, imagine the painting Mona Lisa." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="vivid_rating" plugin="None">
@@ -657,6 +708,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -675,6 +727,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="We will describe scenarios that you will have to imagine in your mind. Then we will ask you to give a score from 1 to 5 to evaluate its liveliness.&amp;#10;&amp;#10;Assess the vividness of your mental image with a score from 1 to 5:&amp;#10;&amp;#10;1: No image is visible.&amp;#10;2: the image is vague and imprecise.&amp;#10;3: The image is moderately clear and sharp.&amp;#10;4: the image is relatively clear, almost as sharp and precise as a visual perception.&amp;#10;5: the image is perfectly clear, as sharp and precise as real visual perception. " valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ImageComponent name="vivid_image" plugin="None">
@@ -683,6 +736,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -703,12 +757,14 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <TextComponent name="vivid_text" plugin="None">
         <Param val="green" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -727,6 +783,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Enter a rating (1-5) to continue. Use the TOP LEFT part of your keyboard." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="vviq_align" plugin="None">
@@ -756,6 +813,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="vviq_instruction" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -768,6 +826,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -786,6 +845,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 1/4: Vividness Test" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="vviq_instruction_text" plugin="None">
@@ -793,6 +853,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -811,6 +872,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="We are going to describe some scenarios to you, which you need to imagine in your mind. &amp;#10;Next, we'll ask you to rate it from 1 to 5 to assess its vividness&amp;#10;&amp;#10;This task takes about 3 minutes." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="vviq_instruction_proceed" plugin="None">
@@ -818,6 +880,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -836,11 +899,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press the &lt; Space &gt; key to proceed." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="vviq_instruction_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -862,6 +927,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -880,6 +946,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Good!" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -892,6 +959,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="vviq_task" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -904,6 +972,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -922,11 +991,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 1/4: Test of Mental Imagery Vividness" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_vviq" plugin="None">
         <Param val="'1','2','3','4','5'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -948,6 +1019,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -966,6 +1038,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Give a score of 1 to 5 to evaluate the vividness of your visual mental imagery" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="vviq_task_idx" plugin="None">
@@ -973,6 +1046,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -991,6 +1065,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$vviq_idx" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="vviq_task_item" plugin="None">
@@ -998,6 +1073,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1016,6 +1092,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$item" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="vviq_task_senario" plugin="None">
@@ -1023,6 +1100,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1041,6 +1119,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$senario" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1053,6 +1132,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="vviq_feedback" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1065,6 +1145,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1083,6 +1164,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 1/4: Vividness test result" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="vviq_feedback_text" plugin="None">
@@ -1107,6 +1189,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1125,11 +1208,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press &lt; Space &gt; key to proceed to the second part." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="vviq_feedback_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1151,6 +1236,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1169,6 +1255,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$msg" valType="str" updates="set every frame" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1181,6 +1268,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_instruction" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1193,6 +1281,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1211,6 +1300,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 2/4: Visual Mental Imagery Test" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="imagery_instruction_text" plugin="None">
@@ -1218,6 +1308,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1236,6 +1327,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="In this second part, we will evaluate your Visual Mental Imagery through tests covering five categories: shape, color, face, letter and map.&amp;#10;&amp;#10;For each category, you will start with a trial. Then, you will need to respond to the following 15 tests.&amp;#10;&amp;#10;This Visual Mental Imagery task will take about 10 minutes." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="imagery_instruction_proceed" plugin="None">
@@ -1243,6 +1335,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1261,11 +1354,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press &lt; Space &gt; to proceed." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="imagery_instruction_proceed_2" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1309,6 +1404,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_task_trials" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1321,6 +1417,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1339,15 +1436,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$task_question" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <SoundComponent name="imagery_task_trials_word1" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="imagery_task_trials_word1" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word1" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -1358,12 +1458,14 @@
         <Param val="8" valType="code" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="imagery_task_trials_word2" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="imagery_task_trials_word2" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word2" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="2" valType="code" updates="None" name="startVal"/>
@@ -1374,12 +1476,14 @@
         <Param val="8" valType="code" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="imagery_task_trials_instruction" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="imagery_task_trials_instruction" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$instruction" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="4" valType="code" updates="None" name="startVal"/>
@@ -1392,6 +1496,7 @@
       <KeyboardComponent name="imagery_task_trials_response" plugin="None">
         <Param val="'1','2'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$correctAns" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1413,6 +1518,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1431,6 +1537,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$order_instruction" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <ImageComponent name="imagery_task_trials_img1" plugin="None">
@@ -1439,6 +1546,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -1459,12 +1567,14 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <TextComponent name="imagery_task_trials_proceed" plugin="None">
         <Param val="green" valType="str" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1483,6 +1593,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$task_continue" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="imagery_task_trials_align" plugin="None">
@@ -1512,6 +1623,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_task_trials_vividness" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1524,6 +1636,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1542,6 +1655,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$task_question" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="imagery_task_trials_vividness_text" plugin="None">
@@ -1549,6 +1663,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1567,11 +1682,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$task_vividness" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="imagery_task_trials_vividness_response" plugin="None">
         <Param val="'1','2','3','4'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1615,6 +1732,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="resting" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1627,6 +1745,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
@@ -1645,6 +1764,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -1657,6 +1777,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_task" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1669,6 +1790,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1687,6 +1809,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 2/4: Test of Visual Mental Imagery" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="imagery_task_idx" plugin="None">
@@ -1694,6 +1817,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1712,15 +1836,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$imagery_task_items.thisN" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <SoundComponent name="imagery_task_word1" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="imagery_task_word1" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word1" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -1731,12 +1858,14 @@
         <Param val="8" valType="code" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="imagery_task_word2" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="imagery_task_word2" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word2" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="2" valType="code" updates="None" name="startVal"/>
@@ -1747,12 +1876,14 @@
         <Param val="8" valType="code" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="imagery_task_instruction" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="imagery_task_instruction" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$instruction" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="4" valType="code" updates="None" name="startVal"/>
@@ -1767,6 +1898,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1785,11 +1917,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Give your answer: first (key &quot;1&quot;) or second (key &quot;2&quot;)." valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="key_resp_vmi" plugin="None">
         <Param val="'1','2'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$correctAns" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1816,6 +1950,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_task_prepare" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1828,6 +1963,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1846,6 +1982,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 2/4 : Test of Imagination" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="imagery_task_prepare_text" plugin="None">
@@ -1853,6 +1990,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1871,11 +2009,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Bravo!&amp;#10;&amp;#10;Now let's start the tests.&amp;#10;&amp;#10;Take your time to answer each question." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="imagery_task_prepare_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -1897,6 +2037,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1915,6 +2056,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="When you are ready, press the &lt; Space &gt; key to proceed." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="imagery_task_prepare_align" plugin="None">
@@ -1944,6 +2086,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_task_vividness" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -1956,6 +2099,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -1974,11 +2118,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Give a score of 1 to 4 to rate the vividness of your image.&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="vividness" plugin="None">
         <Param val="'1','2','3','4'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2005,6 +2151,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="perception_instruction" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2017,6 +2164,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2035,6 +2183,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 3/4 : Test of Perception&amp;#10;&amp;#10;" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="perception_instruction_task" plugin="None">
@@ -2042,6 +2191,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2060,11 +2210,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="In this third part, we are going to show you pictures of objects, food, celebrities, or written words that we have asked you to imagine throughout the part 2 of this test.&amp;#10;&amp;#10;During this part, you will answer the questions by comparing the visual characteristics perceived based on the pictures that you will be able to SEE.&amp;#10;&amp;#10;The perception test takes approximately 10 minutes, with 60 trials in total.&amp;#10;&amp;#10;Attention, for the map test, select the city indicated by a red dot (whether it appears first or second).&amp;#10;&amp;#10;After each question, rate the level of CONFIDENCE of your answer:&amp;#10;1: I am not at all confident in my answer.&amp;#10;2: I'm a little confident about my answer.&amp;#10;3: I am confident in my answer.&amp;#10;4: I am absolutely sure of my answer." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="perception_instruction_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2086,6 +2238,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2104,6 +2257,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press &lt; Space &gt; to proceed. " valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="perception_instruction_align" plugin="None">
@@ -2133,6 +2287,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="perception_task" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2145,6 +2300,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2163,15 +2319,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 3: Test of Perception" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <SoundComponent name="perception_task_word1" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="perception_task_word1" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word1" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -2187,6 +2346,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -2207,14 +2367,17 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <SoundComponent name="perception_task_word2" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="perception_task_word2" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word2" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="2" valType="code" updates="None" name="startVal"/>
@@ -2230,6 +2393,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -2250,14 +2414,17 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <SoundComponent name="perception_task_instruction" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="perception_task_instruction" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$instruction" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="4" valType="code" updates="None" name="startVal"/>
@@ -2273,6 +2440,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
@@ -2293,10 +2461,12 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="128" valType="code" updates="constant" name="texture resolution"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
       </ImageComponent>
       <KeyboardComponent name="perception" plugin="None">
         <Param val="'1','2'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$correctAns" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2318,6 +2488,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2336,6 +2507,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Give your answer: first (key &quot;1&quot;) or second (key &quot;2&quot;)." valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2348,6 +2520,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="perception_task_confidence" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2360,6 +2533,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2378,6 +2552,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$perception_task_trial.thisN" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="perception_task_confidence_text" plugin="None">
@@ -2385,6 +2560,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2403,11 +2579,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Give a score from 1 to 4 to assess your CONFIDENCE.&amp;#10;&amp;#10;1: I am not at all confident in my answer.&amp;#10;2: I'm a little confident about my answer.&amp;#10;3: I am confident in my answer.&amp;#10;4: I am absolutely sure of my answer." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="confidence" plugin="None">
         <Param val="'1','2','3','4'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2451,6 +2629,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="imagery_task_feedback" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2463,6 +2642,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2481,6 +2661,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 2/4: Test of Visual Mental Imagery" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="imagery_task_feedback_text" plugin="None">
@@ -2505,6 +2686,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2523,11 +2705,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$msg" valType="str" updates="set every frame" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="imagery_task_feedback_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2549,6 +2733,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2567,6 +2752,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="When you are ready, press the &lt; Space &gt; key to proceed." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2579,6 +2765,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="perception_task_feedback" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2591,6 +2778,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2609,6 +2797,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 3/4 : Test of Perception" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="perception_task_feedback_text" plugin="None">
@@ -2633,6 +2822,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2651,11 +2841,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$msg" valType="str" updates="set every frame" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="perception_task_feedback_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2677,6 +2869,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2695,6 +2888,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press &lt; Space &gt; to proceed. " valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -2707,6 +2901,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="end_session" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2719,6 +2914,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2737,6 +2933,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="This is the end of tests. Thank you for your participation!&amp;#10;&amp;#10;&amp;#10;Feel free to comment on the site or contact us:&amp;#10;&amp;#10;- Share your experience of life and your result.&amp;#10;- Interested in an fMRI neuroimaging test for research.&amp;#10;- ...&amp;#10;&amp;#10;&amp;#10;Wait for the program to close or press the &lt;Space&gt; key to exit after 5 seconds." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="end_session_align" plugin="None">
@@ -2766,6 +2963,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="resource_manage" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2780,7 +2978,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
         <Param val="resources" valType="code" updates="None" name="name"/>
-        <Param val="['Imagery item construction.xlsx', 'Imagery_domain_selection.xlsx', 'ImageryItems_en.xlsx', 'ImageryPractice_en.xlsx', 'PerceptionItems_en.xlsx', 'SemanticItems.xlsx', 'SemanticItems_test.xlsx', 'vviq_task_online.xlsx', 'imgPerception/Slide1.png', 'imgPerception/Slide2.png', 'imgPerception/Slide3.png', 'imgPerception/Slide4.png', 'imgPerception/Slide5.png', 'imgPerception/Slide6.png', 'imgPerception/Slide7.png', 'imgPerception/Slide8.png', 'imgPerception/Slide9.png', 'imgPerception/Slide10.png', 'imgPerception/Slide11.png', 'imgPerception/Slide12.png', 'imgPerception/Slide13.png', 'imgPerception/Slide14.png', 'imgPerception/Slide15.png', 'imgPerception/Slide16.png', 'imgPerception/Slide17.png', 'imgPerception/Slide18.png', 'imgPerception/Slide19.png', 'imgPerception/Slide20.png', 'imgPerception/Slide21.png', 'imgPerception/Slide22.png', 'imgPerception/Slide23.png', 'imgPerception/Slide24.png', 'imgPerception/Slide25.png', 'imgPerception/Slide26.png', 'imgPerception/Slide27.png', 'imgPerception/Slide28.png', 'imgPerception/Slide29.png', 'imgPerception/Slide30.png', 'imgPerception/Slide31.png', 'imgPerception/Slide32.png', 'imgPerception/Slide33.png', 'imgPerception/Slide34.png', 'imgPerception/Slide35.png', 'imgPerception/Slide36.png', 'imgPerception/Slide37.png', 'imgPerception/Slide38.png', 'imgPerception/Slide39.png', 'imgPerception/Slide40.png', 'imgPerception/Slide41.png', 'imgPerception/Slide42.png', 'imgPerception/Slide43.png', 'imgPerception/Slide44.png', 'imgPerception/Slide45.png', 'imgPerception/Slide46.png', 'imgPerception/Slide47.png', 'imgPerception/Slide48.png', 'imgPerception/Slide49.png', 'imgPerception/Slide50.png', 'imgPerception/Slide51.png', 'imgPerception/Slide52.png', 'imgPerception/Slide53.png', 'imgPerception/Slide54.png', 'imgPerception/Slide55.png', 'imgPerception/Slide56.png', 'imgPerception/Slide57.png', 'imgPerception/Slide58.png', 'imgPerception/Slide59.png', 'imgPerception/Slide60.png', 'imgPerception/Slide61.png', 'imgPerception/Slide62.png', 'imgPerception/Slide63.png', 'imgPerception/Slide64.png', 'imgPerception/Slide65.png', 'imgPerception/Slide66.png', 'imgPerception/Slide67.png', 'imgPerception/Slide68.png', 'imgPerception/Slide69.png', 'imgPerception/Slide70.png', 'imgPerception/Slide71.png', 'imgPerception/Slide72.png', 'imgPerception/Slide73.png', 'imgPerception/Slide74.png', 'imgPerception/Slide75.png', 'imgPerception/Slide76.png', 'imgPerception/Slide77.png', 'imgPerception/Slide78.png', 'imgPerception/Slide79.png', 'imgPerception/Slide80.png', 'imgPerception/Slide81.png', 'imgPerception/Slide82.png', 'imgPerception/Slide83.png', 'imgPerception/Slide84.png', 'imgPerception/Slide85.png', 'imgPerception/Slide86.png', 'imgPerception/Slide87.png', 'imgPerception/Slide88.png', 'imgPerception/Slide89.png', 'imgPerception/Slide90.png', 'imgPerception/Slide91.png', 'imgPerception/Slide92.png', 'imgPerception/Slide93.png', 'imgPerception/Slide94.png', 'imgPerception/Slide95.png', 'imgPerception/Slide96.png', 'imgPerception/Slide97.png', 'imgPerception/Slide98.png', 'imgPerception/Slide99.png', 'imgPerception/Slide100.png', 'imgPerception/Slide101.png', 'imgPerception/Slide102.png', 'imgPerception/Slide103.png', 'imgPerception/Slide104.png', 'imgPerception/Slide105.png', 'imgPerception/Slide106.png', 'imgPerception/Slide107.png', 'imgPerception/Slide108.png', 'imgPerception/Slide109.png', 'imgPerception/Slide110.png', 'imgPerception/Slide111.png', 'imgPerception/Slide112.png', 'imgPerception/Slide113.png', 'imgPerception/Slide114.png', 'imgPerception/Slide115.png', 'imgPerception/Slide116.png', 'imgPerception/Slide117.png', 'imgPerception/Slide118.png', 'imgPerception/Slide119.png', 'imgPerception/Slide120.png', 'imgPerception/Slide121.png', 'imgPerception/Slide122.png', 'imgPerception/Slide123.png', 'imgPerception/Slide124.png', 'imgPerception/Slide125.png', 'imgPerception/Slide126.png', 'imgPerception/Slide127.png', 'imgPerception/Slide128.png', 'imgPerception/Slide129.png', 'imgPerception/Slide130.png', 'imgPerception/Slide131.png', 'imgPerception/Slide132.png', 'imgPerception/Slide133.png', 'imgPerception/Slide134.png', 'imgPerception/Slide135.png', 'imgPerception/Slide136.png', 'imgPerception/Slide137.png', 'imgPerception/Slide138.png', 'imgPerception/Slide139.png', 'imgPerception/Slide140.png', 'imgPerception/Slide141.png', 'imgPerception/Slide142.png', 'imgPerception/Slide143.png', 'imgPerception/Slide144.png', 'imgPerception/Slide145.png', 'imgPerception/Slide146.png', 'imgPerception/Slide147.png', 'imgPerception/Slide148.png', 'imgPerception/Slide149.png', 'imgPerception/Slide150.png', 'imgPerception/Slide151.png', 'imgPerception/Slide152.png', 'imgPerception/Slide153.png', 'imgPerception/Slide154.png', 'imgPerception/Slide155.png', 'imgPerception/Slide156.png', 'imgPerception/Slide157.png', 'imgPerception/Slide158.png', 'imgPerception/Slide159.png', 'imgPerception/Slide160.png', 'imgPerception/Slide161.png', 'imgPerception/Slide162.png', 'imgPerception/Slide163.png', 'imgPerception/Slide164.png', 'imgPerception/Slide165.png', 'imgPerception/Slide166.png', 'imgPerception/Slide167.png', 'imgPerception/Slide168.png', 'imgPerception/Slide169.png', 'imgPerception/Slide170.png', 'imgPerception/Slide171.png', 'imgPerception/Slide172.png', 'imgPerception/Slide173.png', 'imgPerception/Slide174.png', 'imgPerception/Slide175.png', 'imgPerception/Slide176.png', 'imgPerception/Slide177.png', 'imgPerception/Slide178.png', 'imgPerception/Slide179.png', 'imgPerception/Slide180.png', 'imgPerception/Slide181.png', 'imgPerception/Slide182.png', 'imgPerception/Slide183.png', 'imgPerception/Slide184.png', 'imgPerception/Slide185.png', 'img/angersmetz.jpg', 'img/clavier.jpg', 'img/Colour_Trial.png', 'img/Editing images.pptx', 'img/espoireamitie.jpg', 'img/Face_Trial.png', 'img/hollande.jpg', 'img/imgblank.jpg', 'img/Letter_Trial.png', 'img/Map_Trial.png', 'img/Shape_Trial.png', 'img/T.png', 'img/vivacite 2.jpg', 'img/vivacite 3.jpg', 'img/vivacite 4.jpg', 'img/vivacite.jpg', 'audioStims/access.wav', 'audioStims/altruism.wav', 'audioStims/anxiety.wav', 'audioStims/artichokes.wav', 'audioStims/atlanta.wav', 'audioStims/atlanticcity.wav', 'audioStims/austin.wav', 'audioStims/bad.wav', 'audioStims/baguette.wav', 'audioStims/baltimore.wav', 'audioStims/banana.wav', 'audioStims/barackobama.wav', 'audioStims/bathtub.wav', 'audioStims/berniesanders.wav', 'audioStims/boston.wav', 'audioStims/bottle.wav', 'audioStims/bowl.wav', 'audioStims/bradpitt.wav', 'audioStims/brilliance.wav', 'audioStims/broom.wav', 'audioStims/bucket.wav', 'audioStims/burrito.wav', 'audioStims/care.wav', 'audioStims/cauliflower.wav', 'audioStims/chicken.wav', 'audioStims/cincinnati.wav', 'audioStims/cold.wav', 'audioStims/Color.wav', 'audioStims/comfort.wav', 'audioStims/convention.wav', 'audioStims/country.wav', 'audioStims/cucumber.wav', 'audioStims/culture.wav', 'audioStims/dallas.wav', 'audioStims/dark.wav', 'audioStims/decision.wav', 'audioStims/detroit.wav', 'audioStims/discipline.wav', 'audioStims/discovery.wav', 'audioStims/discussion.wav', 'audioStims/down.wav', 'audioStims/elonmusk.wav', 'audioStims/emmastone.wav', 'audioStims/employment.wav', 'audioStims/espresso.wav', 'audioStims/evocation.wav', 'audioStims/Face.wav', 'audioStims/fidelity.wav', 'audioStims/fig.wav', 'audioStims/flamingo.wav', 'audioStims/friendship.wav', 'audioStims/future.wav', 'audioStims/generality.wav', 'audioStims/generosity.wav', 'audioStims/georgewbush.wav', 'audioStims/greenapple.wav', 'audioStims/greenpepper.wav', 'audioStims/guacamole.wav', 'audioStims/hamster.wav', 'audioStims/health.wav', 'audioStims/help.wav', 'audioStims/hope.wav', 'audioStims/houston.wav', 'audioStims/illusion.wav', 'audioStims/impression.wav', 'audioStims/inference.wav', 'audioStims/johnnydepp.wav', 'audioStims/juliaroberts.wav', 'audioStims/justice.wav', 'audioStims/justinbieber.wav', 'audioStims/justintimberlake.wav', 'audioStims/kamalaharris.wav', 'audioStims/kangarou.wav', 'audioStims/kansascity.wav', 'audioStims/kevinhart.wav', 'audioStims/koala.wav', 'audioStims/ladybug.wav', 'audioStims/lasvegas.wav', 'audioStims/laziness.wav', 'audioStims/learning.wav', 'audioStims/left.wav', 'audioStims/lemon.wav', 'audioStims/leonardodicaprio.wav', 'audioStims/Letter.wav', 'audioStims/light.wav', 'audioStims/lighter.wav', 'audioStims/long.wav', 'audioStims/Map.wav', 'audioStims/mariotest2.wav', 'audioStims/markzuckerberg.wav', 'audioStims/marshmellow.wav', 'audioStims/matthewmcconaughey.wav', 'audioStims/memphis.wav', 'audioStims/mention.wav', 'audioStims/merit.wav', 'audioStims/miami.wav', 'audioStims/michaelphelps.wav', 'audioStims/minneapolis.wav', 'audioStims/mission.wav', 'audioStims/motivation.wav', 'audioStims/mystery.wav', 'audioStims/nashville.wav', 'audioStims/noise.wav', 'audioStims/opinion.wav', 'audioStims/oprahwinfrey.wav', 'audioStims/pan.wav', 'audioStims/panda.wav', 'audioStims/penalty.wav', 'audioStims/penguin.wav', 'audioStims/philadelphia.wav', 'audioStims/philosophy.wav', 'audioStims/phoenix.wav', 'audioStims/pineapple.wav', 'audioStims/pomogranate.wav', 'audioStims/portland.wav', 'audioStims/possession.wav', 'audioStims/prejudice.wav', 'audioStims/princewilliam.wav', 'audioStims/prove.wav', 'audioStims/pumpkin.wav', 'audioStims/quality.wav', 'audioStims/reality.wav', 'audioStims/reasoning.wav', 'audioStims/redwine.wav', 'audioStims/reject.wav', 'audioStims/retrieve.wav', 'audioStims/right.wav', 'audioStims/rigor.wav', 'audioStims/rihanna.wav', 'audioStims/round.wav', 'audioStims/routine.wav', 'audioStims/sarahjessicaparker.wav', 'audioStims/seattle.wav', 'audioStims/selenagomez.wav', 'audioStims/Semantic.wav', 'audioStims/sentence.wav', 'audioStims/serenawilliams.wav', 'audioStims/shakira.wav', 'audioStims/Shape.wav', 'audioStims/silence.wav', 'audioStims/smart.wav', 'audioStims/society.wav', 'audioStims/spirit.wav', 'audioStims/stevejobs.wav', 'audioStims/strawberry.wav', 'audioStims/summary.wav', 'audioStims/taylorswift.wav', 'audioStims/tripod.wav', 'audioStims/up.wav', 'audioStims/victory.wav', 'audioStims/warmth.wav', 'audioStims/washingtondc.wav', 'audioStims/whiteshark.wav', 'audioStims/willsmith.wav', 'audioStims/year.wav', 'audioStims/zucchini.wav']" valType="list" updates="constant" name="resources"/>
+        <Param val="['Imagery_domain_selection.xlsx', 'ImageryItems_en.xlsx', 'ImageryPractice_en.xlsx', 'PerceptionItems_en.xlsx', 'SemanticItems.xlsx', 'SemanticItems_test.xlsx', 'vviq_task_online.xlsx', 'imgPerception/Slide1.png', 'imgPerception/Slide2.png', 'imgPerception/Slide3.png', 'imgPerception/Slide4.png', 'imgPerception/Slide5.png', 'imgPerception/Slide6.png', 'imgPerception/Slide7.png', 'imgPerception/Slide8.png', 'imgPerception/Slide9.png', 'imgPerception/Slide10.png', 'imgPerception/Slide11.png', 'imgPerception/Slide12.png', 'imgPerception/Slide13.png', 'imgPerception/Slide14.png', 'imgPerception/Slide15.png', 'imgPerception/Slide16.png', 'imgPerception/Slide17.png', 'imgPerception/Slide18.png', 'imgPerception/Slide19.png', 'imgPerception/Slide20.png', 'imgPerception/Slide21.png', 'imgPerception/Slide22.png', 'imgPerception/Slide23.png', 'imgPerception/Slide24.png', 'imgPerception/Slide25.png', 'imgPerception/Slide26.png', 'imgPerception/Slide27.png', 'imgPerception/Slide28.png', 'imgPerception/Slide29.png', 'imgPerception/Slide30.png', 'imgPerception/Slide31.png', 'imgPerception/Slide32.png', 'imgPerception/Slide33.png', 'imgPerception/Slide34.png', 'imgPerception/Slide35.png', 'imgPerception/Slide36.png', 'imgPerception/Slide37.png', 'imgPerception/Slide38.png', 'imgPerception/Slide39.png', 'imgPerception/Slide40.png', 'imgPerception/Slide41.png', 'imgPerception/Slide42.png', 'imgPerception/Slide43.png', 'imgPerception/Slide44.png', 'imgPerception/Slide45.png', 'imgPerception/Slide46.png', 'imgPerception/Slide47.png', 'imgPerception/Slide48.png', 'imgPerception/Slide49.png', 'imgPerception/Slide50.png', 'imgPerception/Slide51.png', 'imgPerception/Slide52.png', 'imgPerception/Slide53.png', 'imgPerception/Slide54.png', 'imgPerception/Slide55.png', 'imgPerception/Slide56.png', 'imgPerception/Slide57.png', 'imgPerception/Slide58.png', 'imgPerception/Slide59.png', 'imgPerception/Slide60.png', 'imgPerception/Slide61.png', 'imgPerception/Slide62.png', 'imgPerception/Slide63.png', 'imgPerception/Slide64.png', 'imgPerception/Slide65.png', 'imgPerception/Slide66.png', 'imgPerception/Slide67.png', 'imgPerception/Slide68.png', 'imgPerception/Slide69.png', 'imgPerception/Slide70.png', 'imgPerception/Slide71.png', 'imgPerception/Slide72.png', 'imgPerception/Slide73.png', 'imgPerception/Slide74.png', 'imgPerception/Slide75.png', 'imgPerception/Slide76.png', 'imgPerception/Slide77.png', 'imgPerception/Slide78.png', 'imgPerception/Slide79.png', 'imgPerception/Slide80.png', 'imgPerception/Slide81.png', 'imgPerception/Slide82.png', 'imgPerception/Slide83.png', 'imgPerception/Slide84.png', 'imgPerception/Slide85.png', 'imgPerception/Slide86.png', 'imgPerception/Slide87.png', 'imgPerception/Slide88.png', 'imgPerception/Slide89.png', 'imgPerception/Slide90.png', 'imgPerception/Slide91.png', 'imgPerception/Slide92.png', 'imgPerception/Slide93.png', 'imgPerception/Slide94.png', 'imgPerception/Slide95.png', 'imgPerception/Slide96.png', 'imgPerception/Slide97.png', 'imgPerception/Slide98.png', 'imgPerception/Slide99.png', 'imgPerception/Slide100.png', 'imgPerception/Slide101.png', 'imgPerception/Slide102.png', 'imgPerception/Slide103.png', 'imgPerception/Slide104.png', 'imgPerception/Slide105.png', 'imgPerception/Slide106.png', 'imgPerception/Slide107.png', 'imgPerception/Slide108.png', 'imgPerception/Slide109.png', 'imgPerception/Slide110.png', 'imgPerception/Slide111.png', 'imgPerception/Slide112.png', 'imgPerception/Slide113.png', 'imgPerception/Slide114.png', 'imgPerception/Slide115.png', 'imgPerception/Slide116.png', 'imgPerception/Slide117.png', 'imgPerception/Slide118.png', 'imgPerception/Slide119.png', 'imgPerception/Slide120.png', 'imgPerception/Slide121.png', 'imgPerception/Slide122.png', 'imgPerception/Slide123.png', 'imgPerception/Slide124.png', 'imgPerception/Slide125.png', 'imgPerception/Slide126.png', 'imgPerception/Slide127.png', 'imgPerception/Slide128.png', 'imgPerception/Slide129.png', 'imgPerception/Slide130.png', 'imgPerception/Slide131.png', 'imgPerception/Slide132.png', 'imgPerception/Slide133.png', 'imgPerception/Slide134.png', 'imgPerception/Slide135.png', 'imgPerception/Slide136.png', 'imgPerception/Slide137.png', 'imgPerception/Slide138.png', 'imgPerception/Slide139.png', 'imgPerception/Slide140.png', 'imgPerception/Slide141.png', 'imgPerception/Slide142.png', 'imgPerception/Slide143.png', 'imgPerception/Slide144.png', 'imgPerception/Slide145.png', 'imgPerception/Slide146.png', 'imgPerception/Slide147.png', 'imgPerception/Slide148.png', 'imgPerception/Slide149.png', 'imgPerception/Slide150.png', 'imgPerception/Slide151.png', 'imgPerception/Slide152.png', 'imgPerception/Slide153.png', 'imgPerception/Slide154.png', 'imgPerception/Slide155.png', 'imgPerception/Slide156.png', 'imgPerception/Slide157.png', 'imgPerception/Slide158.png', 'imgPerception/Slide159.png', 'imgPerception/Slide160.png', 'imgPerception/Slide161.png', 'imgPerception/Slide162.png', 'imgPerception/Slide163.png', 'imgPerception/Slide164.png', 'imgPerception/Slide165.png', 'imgPerception/Slide166.png', 'imgPerception/Slide167.png', 'imgPerception/Slide168.png', 'imgPerception/Slide169.png', 'imgPerception/Slide170.png', 'imgPerception/Slide171.png', 'imgPerception/Slide172.png', 'imgPerception/Slide173.png', 'imgPerception/Slide174.png', 'imgPerception/Slide175.png', 'imgPerception/Slide176.png', 'imgPerception/Slide177.png', 'imgPerception/Slide178.png', 'imgPerception/Slide179.png', 'imgPerception/Slide180.png', 'imgPerception/Slide181.png', 'imgPerception/Slide182.png', 'imgPerception/Slide183.png', 'imgPerception/Slide184.png', 'imgPerception/Slide185.png', 'img/clavier.jpg', 'img/Colour_Trial.png', 'img/Face_Trial.png', 'img/Letter_Trial.png', 'img/Map_Trial.png', 'img/Shape_Trial.png', 'img/vivacite.jpg', 'audioStims/access.wav', 'audioStims/altruism.wav', 'audioStims/anxiety.wav', 'audioStims/artichokes.wav', 'audioStims/atlanta.wav', 'audioStims/atlanticcity.wav', 'audioStims/austin.wav', 'audioStims/bad.wav', 'audioStims/baguette.wav', 'audioStims/baltimore.wav', 'audioStims/banana.wav', 'audioStims/barackobama.wav', 'audioStims/bathtub.wav', 'audioStims/berniesanders.wav', 'audioStims/boston.wav', 'audioStims/bottle.wav', 'audioStims/bowl.wav', 'audioStims/bradpitt.wav', 'audioStims/brilliance.wav', 'audioStims/broom.wav', 'audioStims/bucket.wav', 'audioStims/burrito.wav', 'audioStims/care.wav', 'audioStims/cauliflower.wav', 'audioStims/chicken.wav', 'audioStims/cincinnati.wav', 'audioStims/cold.wav', 'audioStims/Color.wav', 'audioStims/comfort.wav', 'audioStims/convention.wav', 'audioStims/country.wav', 'audioStims/cucumber.wav', 'audioStims/culture.wav', 'audioStims/dallas.wav', 'audioStims/dark.wav', 'audioStims/decision.wav', 'audioStims/detroit.wav', 'audioStims/discipline.wav', 'audioStims/discovery.wav', 'audioStims/discussion.wav', 'audioStims/down.wav', 'audioStims/elonmusk.wav', 'audioStims/emmastone.wav', 'audioStims/employment.wav', 'audioStims/espresso.wav', 'audioStims/evocation.wav', 'audioStims/Face.wav', 'audioStims/fidelity.wav', 'audioStims/fig.wav', 'audioStims/flamingo.wav', 'audioStims/friendship.wav', 'audioStims/future.wav', 'audioStims/generality.wav', 'audioStims/generosity.wav', 'audioStims/georgewbush.wav', 'audioStims/greenapple.wav', 'audioStims/greenpepper.wav', 'audioStims/guacamole.wav', 'audioStims/hamster.wav', 'audioStims/health.wav', 'audioStims/help.wav', 'audioStims/hope.wav', 'audioStims/houston.wav', 'audioStims/illusion.wav', 'audioStims/impression.wav', 'audioStims/inference.wav', 'audioStims/johnnydepp.wav', 'audioStims/juliaroberts.wav', 'audioStims/justice.wav', 'audioStims/justinbieber.wav', 'audioStims/justintimberlake.wav', 'audioStims/kamalaharris.wav', 'audioStims/kangarou.wav', 'audioStims/kansascity.wav', 'audioStims/kevinhart.wav', 'audioStims/koala.wav', 'audioStims/ladybug.wav', 'audioStims/lasvegas.wav', 'audioStims/laziness.wav', 'audioStims/learning.wav', 'audioStims/left.wav', 'audioStims/lemon.wav', 'audioStims/leonardodicaprio.wav', 'audioStims/Letter.wav', 'audioStims/light.wav', 'audioStims/lighter.wav', 'audioStims/long.wav', 'audioStims/Map.wav', 'audioStims/mariotest2.wav', 'audioStims/markzuckerberg.wav', 'audioStims/marshmellow.wav', 'audioStims/matthewmcconaughey.wav', 'audioStims/memphis.wav', 'audioStims/mention.wav', 'audioStims/merit.wav', 'audioStims/miami.wav', 'audioStims/michaelphelps.wav', 'audioStims/minneapolis.wav', 'audioStims/mission.wav', 'audioStims/motivation.wav', 'audioStims/mystery.wav', 'audioStims/nashville.wav', 'audioStims/noise.wav', 'audioStims/opinion.wav', 'audioStims/oprahwinfrey.wav', 'audioStims/pan.wav', 'audioStims/panda.wav', 'audioStims/penalty.wav', 'audioStims/penguin.wav', 'audioStims/philadelphia.wav', 'audioStims/philosophy.wav', 'audioStims/phoenix.wav', 'audioStims/pineapple.wav', 'audioStims/pomogranate.wav', 'audioStims/portland.wav', 'audioStims/possession.wav', 'audioStims/prejudice.wav', 'audioStims/princewilliam.wav', 'audioStims/prove.wav', 'audioStims/pumpkin.wav', 'audioStims/quality.wav', 'audioStims/reality.wav', 'audioStims/reasoning.wav', 'audioStims/redwine.wav', 'audioStims/reject.wav', 'audioStims/retrieve.wav', 'audioStims/right.wav', 'audioStims/rigor.wav', 'audioStims/rihanna.wav', 'audioStims/round.wav', 'audioStims/routine.wav', 'audioStims/sarahjessicaparker.wav', 'audioStims/seattle.wav', 'audioStims/selenagomez.wav', 'audioStims/Semantic.wav', 'audioStims/sentence.wav', 'audioStims/serenawilliams.wav', 'audioStims/shakira.wav', 'audioStims/Shape.wav', 'audioStims/silence.wav', 'audioStims/smart.wav', 'audioStims/society.wav', 'audioStims/spirit.wav', 'audioStims/stevejobs.wav', 'audioStims/strawberry.wav', 'audioStims/summary.wav', 'audioStims/taylorswift.wav', 'audioStims/tripod.wav', 'audioStims/up.wav', 'audioStims/victory.wav', 'audioStims/warmth.wav', 'audioStims/washingtondc.wav', 'audioStims/whiteshark.wav', 'audioStims/willsmith.wav', 'audioStims/year.wav', 'audioStims/zucchini.wav']" valType="list" updates="constant" name="resources"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="" valType="code" updates="None" name="startVal"/>
@@ -2797,6 +2995,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="sem_trial" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2809,6 +3008,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2827,6 +3027,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 4/4: Test of Semantics" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="semanticBlock_idx" plugin="None">
@@ -2834,6 +3035,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -2852,6 +3054,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$semanticBlock.thisN" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <PolygonComponent name="fixation" plugin="None">
@@ -2859,6 +3062,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="white" valType="color" updates="constant" name="fillColor"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
@@ -2879,15 +3083,18 @@
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
       <SoundComponent name="field_s" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
         <Param val="field_s" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$field" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0.0" valType="code" updates="None" name="startVal"/>
@@ -2898,12 +3105,14 @@
         <Param val="1" valType="num" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="word1_s" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
         <Param val="word1_s" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word1_sem" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="2" valType="code" updates="None" name="startVal"/>
@@ -2914,12 +3123,14 @@
         <Param val="1" valType="num" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="word2_s" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
         <Param val="word2_s" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word2_sem" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="4" valType="code" updates="None" name="startVal"/>
@@ -2930,12 +3141,14 @@
         <Param val="1" valType="num" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="instr_s" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="True" valType="bool" updates="constant" name="hamming"/>
         <Param val="instr_s" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$instruction_sem" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="6" valType="code" updates="None" name="startVal"/>
@@ -2948,6 +3161,7 @@
       <KeyboardComponent name="key_resp_vmi_s" plugin="None">
         <Param val="'1','2'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -2974,6 +3188,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="sem_instruction" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -2986,6 +3201,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -3004,6 +3220,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Part 4/4: Test of Semantics" valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="semantics_instruction_task" plugin="None">
@@ -3011,6 +3228,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -3029,11 +3247,13 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="In this last part, we will evaluate your association between abstract words.&amp;#10;&amp;#10;During this part, you will answer the questions by comparing the abstract characteristics based on the semantic relationship.&amp;#10;For each trial, you will hear two abstract words after hearing the instruction “Semantics”. Then, you will hear the indication semantic word. &amp;#10;Which of them is closer to the indication word?&amp;#10;We will start with a practice trial. &amp;#10;&amp;#10;This Semantics Task will take about 3 minutes with 12 trials." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="semantics_instruction_response" plugin="None">
         <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3055,6 +3275,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -3073,6 +3294,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="Press &lt;Space&gt; to proceed." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
@@ -3085,6 +3307,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="semantics_task_trials" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
@@ -3097,6 +3320,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -3115,15 +3339,18 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$task_question" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <SoundComponent name="semantics_task_trials_word1" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="semantics_task_trials_word1" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word1" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -3134,12 +3361,14 @@
         <Param val="8" valType="code" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="semantics_task_trials_word2" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="semantics_task_trials_word2" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$word2" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="2" valType="code" updates="None" name="startVal"/>
@@ -3150,12 +3379,14 @@
         <Param val="8" valType="code" updates="constant" name="volume"/>
       </SoundComponent>
       <SoundComponent name="semantics_task_trials_instruction" plugin="None">
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="hamming"/>
         <Param val="semantics_task_trials_instruction" valType="code" updates="None" name="name"/>
         <Param val="False" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="$instruction" valType="str" updates="set every repeat" name="sound"/>
+        <Param val="-1" valType="code" updates="None" name="speakerIndex"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="4" valType="code" updates="None" name="startVal"/>
@@ -3168,6 +3399,7 @@
       <KeyboardComponent name="semantics_task_trials_response" plugin="None">
         <Param val="'1','2'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="$correctAns" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="True" valType="bool" updates="constant" name="discard previous"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
@@ -3189,6 +3421,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -3207,6 +3440,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$order_instruction" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <TextComponent name="semantics_task_trials_proceed" plugin="None">
@@ -3214,6 +3448,7 @@
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="" valType="str" updates="constant" name="flip"/>
         <Param val="Arial" valType="str" updates="constant" name="font"/>
@@ -3232,6 +3467,7 @@
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
         <Param val="$task_continue" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="code" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="semantics_task_trials_align" plugin="None">
